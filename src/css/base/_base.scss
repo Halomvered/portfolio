@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /*Round base measurment that helps use rem on future elements*/
+    /*and change all inherited measurement later on on media queries*/
+    /*We use % instead of px, to maintain proper accesibility for short sighted people*/
+    //default browser font size is 16px
+    font-size: 62.5%; // 1 rem = 10px; 10px/16px= 62.5;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+}
+
+// ::selection {
+//     background-color: $color-primary;
+//     color: $color-white;
+// }
+
