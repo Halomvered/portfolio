@@ -21,7 +21,7 @@ var colorArray = [
     "#820333",
     "#C9283E",
     "#F0433A",
-]
+];
 
 window.addEventListener('mousemove', (e) => {
     mouse.x = event.x;
@@ -32,7 +32,7 @@ window.addEventListener('resize', (e) => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     init();
-})
+});
 
 function Circle(x, y, dx, dy, radius) {
     this.x = x;
@@ -50,12 +50,12 @@ function Circle(x, y, dx, dy, radius) {
         // c.stroke();
         c.fillStyle = this.color;
         c.fill();
-    }
+    };
 
     this.update = function () {
         if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
             this.dx = -this.dx;
-        }
+        };
 
         if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
             this.dy = -this.dy;
@@ -75,7 +75,7 @@ function Circle(x, y, dx, dy, radius) {
 
         this.draw();
     }
-}
+};
 
 
 var circleArray = [];
@@ -89,15 +89,15 @@ function init() {
         var dy = (Math.random() - 0.5);
         circleArray.push(new Circle(x, y, dx, dy, radius));
     }
-}
+};
 
 function animate() {
     requestAnimationFrame(animate);
     c.clearRect(0, 0, innerWidth, innerHeight);
 
     circleArray.forEach( circle => circle.update());
-}
+};
 
 animate();
 init();
-}
+};
