@@ -1,3 +1,9 @@
-// .section-about {
+.container {
+    max-width: 120rem;
+    margin: 3rem auto;
+    background-color: var(--color-primary-3);
+    box-shadow: var(--shadow-dark);
+    display: flex;
 
-// }
+    min-height: 80vh;
+}

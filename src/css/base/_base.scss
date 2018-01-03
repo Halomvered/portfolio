@@ -8,15 +8,27 @@
 
 html {
     /*Round base measurment that helps use rem on future elements*/
-    /*and change all inherited measurement later on on media queries*/
+    /*and change all inherited measurement later-on on media queries*/
     /*We use % instead of px, to maintain proper accesibility for short sighted people*/
     //default browser font size is 16px
-    font-size: 62.5%; // 1 rem = 10px; 10px/16px= 62.5;
+
+    font-size: 62.5%; // 1 rem = 10px; 10px/16px= 62.5%;
+    box-sizing: border-box;
 }
 
 body {
-    box-sizing: border-box;
-    padding: 3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-grey-dark-2);
+    background-image: linear-gradient(to right bottom,
+    var(--color-primary-2-light),
+    var(--color-primary-2-dark)
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
 }
 
 // ::selection {

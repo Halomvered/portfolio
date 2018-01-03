@@ -3,10 +3,67 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <title>Halom Vered - Front End Development</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <img src="../img/test-image.jpg" alt="">
+    
+    <div class="container">
+
+        <header class="sidebar">
+
+            <div class="sidebar__logo">
+                <img src="../img/halom-logo.png" alt="Halom logo" class="logo">
+            </div>
+
+            <nav class="sidebar__side-nav">
+                    <button class="sidebar__side-nav-item btn">
+                            <svg class="btn__visible btn-home">
+                                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                            </svg>
+                            <span class="btn__invisible btn-span-home">Home</span>
+                    </button>
+                    <button class="sidebar__side-nav-item btn">
+                            <svg class="btn__visible">
+                                    <use xlink:href="img/sprite.svg#icon-profile-male"></use>
+                            </svg>
+                            <span class="btn__invisible">About</span>
+                    </button>
+                    <button class="sidebar__side-nav-item btn">
+                            <svg class="btn__visible">
+                                    <use xlink:href="img/sprite.svg#icon-briefcase"></use>
+                            </svg>
+                            <span class="btn__invisible">Portfolio</span>
+                    </button>
+                    <button class="sidebar__side-nav-item btn">
+                            <svg class="btn__visible">
+                                    <use xlink:href="img/sprite.svg#icon-envelope"></use>
+                            </svg>
+                            <span class="btn__invisible">Contact</span>
+                    </button>
+            </nav>
+
+            <footer class="sidebar__footer">
+                    <div class="sidebar__footer--social">
+                            <svg class="sidebar__footer--social-item">
+                                    <use xlink:href="img/sprite.svg#icon-github"></use>
+                            </svg>
+                            <svg class="sidebar__footer--social-item">
+                                    <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+                            </svg>
+                    </div>
+                    <div class="sidebar__footer--legal">
+                            &copy; 2017 by Halom Vered. All rights reserved.
+                    </div>
+            </footer>
+
+        </header>
+        <main class="main-content">
+            
+        </main>
+    </div>
+
 </body>
 </html>

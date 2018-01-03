@@ -1,0 +1,58 @@
+.btn {
+    background-color: inherit;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: none;
+    color: var(--color-primary-4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: opacity .4s,
+                    fill    .25s;
+    }
+
+    &__visible {
+        height: 5rem;
+        fill: var(--color-grey-light-4);
+    }
+    
+    &__invisible {
+        padding: 1.5rem 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    
+    // &:hover {
+    // }
+    
+    &:hover &__visible {
+            // opacity: 0;
+            fill: var(--color-primary-1);
+        }
+
+    &:hover &__invisible {
+            opacity: 1;
+        }
+
+    &:focus {
+        outline: none;
+    }
+
+    &-home {
+        stroke: var(--color-primary-1);
+        stroke-width: 1.5px;
+        height: 6.7rem;
+    }
+
+    &-span-home {
+        padding-top: 2.5rem;
+    }
+}
