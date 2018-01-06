@@ -1,13 +1,8 @@
-.btn {
-    background-color: inherit;
-    font-size: 2.5rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    border: none;
-    color: var(--color-primary-4);
+.btn-js {
+    @include buttonBase;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
+    font-size: 2.5rem;
 
     & > * {
         display: inline-block;
@@ -30,8 +25,6 @@
         opacity: 0;
     }
     
-    // &:hover {
-    // }
     
     &:hover &__visible {
             // opacity: 0;
@@ -54,5 +47,107 @@
 
     &-span-home {
         padding-top: 2.5rem;
+    }
+
+
+    
+}
+
+.btn-social {
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        fill: var(--color-grey-light-4);
+
+    }
+
+    &-icon {
+        height: 3rem;
+        width: 3rem;
+        margin-right: 2rem;
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-dark);
+            fill: var(--color-primary-4);
+    
+            &::after {
+                transform: scalex(1.4) scaleY(1.4);
+                opacity: 0;
+            }
+        }
+    
+        &:active,
+        &:focus {
+            outline: none;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-dark);
+        }
+    }
+
+}
+
+
+.btn-solid {
+    &,
+    &:link,
+    &:visited {
+        @include buttonBase;
+        font-size: var(--default-font-size);
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--color-primary-3);
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: var(--border-radius);
+        border: 2px solid var(--color-white);
+        position: relative;
+        background-color: var(--color-primary-1-transparent);
+        box-shadow: var(--shadow-dark);
+
+
+    }
+
+    &--animated {
+        animation: ctaAppearence .5s ease-out 4s;
+        animation-fill-mode: backwards;
+    }
+
+}
+
+.btn-spread { 
+    &:hover {
+        box-shadow: var(--shadow-dark);
+        transform: translateY(-3px);
+
+        &::after {
+            transform: scalex(1.4) scaleY(1.4);
+            opacity: 0;
+            background-color: var(--color-white);
+
+        }
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-dark);
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 2px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
     }
 }

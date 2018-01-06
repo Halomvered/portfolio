@@ -1,12 +1,15 @@
 :root {
     --color-primary-1: #161724;
+    --color-primary-1-transparent: rgba(22, 23, 36, 0.706);
 
     --color-primary-2-light: #FF5349;
     --color-primary-2-dark: #96312B;
 
     --color-primary-3: #F0F0F1;
     --color-primary-4: #18CDCA;
+    --color-primary-4-transparent: rgba(24, 205, 202, 0.637);
     --color-primary-5: #4F80E1;
+    --color-primary-5-transparent: rgba(79, 128, 225, 0.637);
 
     --color-grey-light-1: #faf9f9;
     --color-grey-light-2: #f4f2f2;
@@ -24,6 +27,9 @@
     --color-black: rgb(0, 0, 0);
 
     --line: 1px solid var(--color-grey-light-2);
+
+    // General layout border radius
+    --border-radius: (2px);
 
     // Font
     --default-font-size: 1.6rem;

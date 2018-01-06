@@ -1,102 +1,144 @@
-export var randomFadingCircles = function () {
+// Exporting to app.js
+export var randomFadingCircles = function (element, radiusRange, changeRate, colorArray, circleNum) {
 
-var canvas = document.querySelector('canvas');
+// Set variables for the element in which you want to create it + set its context
+// in a variable.
+var canvas = document.querySelector(element),
+    c      = canvas.getContext('2d');
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// Use a function to generate the canvas in the selected element.
+fitToContainer(canvas);
 
-var c = canvas.getContext('2d');
+// Set the element's style properties width and height, and set
+// the canvas to fill the entire element.
+function fitToContainer(canvas){
+  canvas.style.width='100%';
+  canvas.style.height='100%';
+  canvas.width  = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
 
-//Random circles
-var mouse = {
-    x : undefined,
-    y : undefined
-};
 
-const maxRadius = 40;
+// // Create object to track mouse movement, in case you want to use
+// // this animation interactively.
+// var mouse = {
+//     x : undefined,
+//     y : undefined
+// };
+// window.addEventListener('mousemove', (e) => {
+//     mouse.x = event.x - canvas.parentElement.offsetLeft;
+//     mouse.y = event.y - canvas.parentElement.offsetTop;
+// });
 
-var colorArray = [
-    "#2E112D",
-    "#540032",
-    "#820333",
-    "#C9283E",
-    "#F0433A",
-];
 
-window.addEventListener('mousemove', (e) => {
-    mouse.x = event.x;
-    mouse.y = event.y;
-});
 
+// Regenerate the circles and thier boundries when the window is resized.
 window.addEventListener('resize', (e) => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
     init();
 });
 
-function Circle(x, y, dx, dy, radius) {
+
+// Class for the template of the circle
+function Circle(x, y, dx, dy, radius, changeRate) {
+    // Coordinates where it's generated on the screen.
     this.x = x;
     this.y = y;
+
+    // The dicrection amd speed in which it moves.
     this.dx = dx;
     this.dy = dy;
-    this.radius = radius;
-    this.minRadius = radius;
+
+    // Its size and minimum size.
+    this.radius = radius + 1;
+    this.minRadius = radius - Math.random() + 1;
+    this.maxRadius = radius + Math.random() + 2;
+    this.changeRate = (Math.random() < 0.5 ? -1 : 1) * changeRate;
+
+    // Randomaly selected color from a predefined array of colors.
     this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
 
+    // Method for circle creation.
     this.draw = function(){
         c.beginPath();
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        // c.strokeStyle = "blue";
-        // c.stroke();
         c.fillStyle = this.color;
         c.fill();
     };
 
+    // Method to define the circle's behaviour(direction, when it changes direction and
+    // how much should it grow/shrink)
+
+    // Change the circle's direction when it reaches the canvas's border.
     this.update = function () {
-        if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
+        if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
             this.dx = -this.dx;
         };
 
-        if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+        if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
             this.dy = -this.dy;
         }
+
+        // Generate the the next circle in its next position according to its
+        // speed and direction variables.
         this.x += this.dx;
         this.y += this.dy;
 
-        // Interactivity
+        if (this.radius > this.maxRadius && this.changeRate > 0) {
+            this.changeRate = -this.changeRate;
+        } 
+        if (this.radius < this.minRadius && this.changeRate < 0) {
+            this.changeRate = -this.changeRate;
+        } 
+        
+        
+        this.radius += this.changeRate;
+        
 
-        if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50) {
-            if (this.radius < maxRadius) {
-                this.radius += 1;
-                }
-        } else if (this.radius > this.minRadius) {
-            this.radius -= 1;
-        }
+        // if (this.radius < this.maxRadius) {
+        // } 
+        
 
+        // Interactivity to make each circle grow when it comes with a certain radius of the mouse.
+        // if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50) {
+        //     if (this.radius < maxRadius) {
+        //         this.radius += 1;
+        //         }
+        // } else if (this.radius > this.minRadius) {
+        //     this.radius -= 1;
+        // }
+
+        // Redraw the circle with it's updates.
         this.draw();
     }
 };
 
 
 var circleArray = [];
+// Function to populate the circleArray
 function init() {
     circleArray = [];
-    for (let i = 0; i < 1000; i++) {
-        var radius = Math.random() * 10 + 1;
-        var x = Math.random() * (window.innerWidth - (radius * 2)) + radius;
-        var y = Math.random() * (window.innerHeight - (radius * 2)) + radius;
+    for (let i = 0; i < circleNum; i++) {
+        var radius = Math.random() * radiusRange + 1;
+        var x = Math.random() * (canvas.width - (radius * 2)) + radius;
+        var y = Math.random() * (canvas.height - (radius * 2)) + radius;
         var dx = (Math.random() - 0.5);
         var dy = (Math.random() - 0.5);
-        circleArray.push(new Circle(x, y, dx, dy, radius));
+        circleArray.push(new Circle(x, y, dx, dy, radius, changeRate));
     }
 };
 
-function animate() {
-    requestAnimationFrame(animate);
-    c.clearRect(0, 0, innerWidth, innerHeight);
 
+function animate() {
+    // use requestAnimationFrame to make run the animation economically.
+    requestAnimationFrame(animate);
+    // Clear all the previous positions of the circles.
+    c.clearRect(0, 0, innerWidth, innerHeight);
+    // Use each circles method to redraw it in its new position.
     circleArray.forEach( circle => circle.update());
 };
+
 
 animate();
 init();

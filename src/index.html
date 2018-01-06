@@ -19,40 +19,45 @@
             </div>
 
             <nav class="sidebar__side-nav">
-                    <button class="sidebar__side-nav-item btn">
-                            <svg class="btn__visible btn-home">
+                    <button class="sidebar__side-nav-item btn-js">
+                            <svg class="btn-js__visible btn-js-home">
                                     <use xlink:href="img/sprite.svg#icon-home"></use>
                             </svg>
-                            <span class="btn__invisible btn-span-home">Home</span>
+                            <span class="btn-js__invisible btn-js-span-home">Home</span>
                     </button>
-                    <button class="sidebar__side-nav-item btn">
-                            <svg class="btn__visible">
+                    <button class="sidebar__side-nav-item btn-js">
+                            <svg class="btn-js__visible">
                                     <use xlink:href="img/sprite.svg#icon-profile-male"></use>
                             </svg>
-                            <span class="btn__invisible">About</span>
+                            <span class="btn-js__invisible">About</span>
                     </button>
-                    <button class="sidebar__side-nav-item btn">
-                            <svg class="btn__visible">
+                    <button class="sidebar__side-nav-item btn-js">
+                            <svg class="btn-js__visible">
                                     <use xlink:href="img/sprite.svg#icon-briefcase"></use>
                             </svg>
-                            <span class="btn__invisible">Portfolio</span>
+                            <span class="btn-js__invisible">Portfolio</span>
                     </button>
-                    <button class="sidebar__side-nav-item btn">
-                            <svg class="btn__visible">
+                    <button class="sidebar__side-nav-item btn-js">
+                            <svg class="btn-js__visible">
                                     <use xlink:href="img/sprite.svg#icon-envelope"></use>
                             </svg>
-                            <span class="btn__invisible">Contact</span>
+                            <span class="btn-js__invisible">Contact</span>
                     </button>
             </nav>
 
             <footer class="sidebar__footer">
                     <div class="sidebar__footer--social">
-                            <svg class="sidebar__footer--social-item">
-                                    <use xlink:href="img/sprite.svg#icon-github"></use>
-                            </svg>
-                            <svg class="sidebar__footer--social-item">
-                                    <use xlink:href="img/sprite.svg#icon-linkedin"></use>
-                            </svg>
+                            <a href="#" class="btn-social">
+                                <svg class="btn-social-icon">
+                                        <use xlink:href="img/sprite.svg#icon-github"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="btn-social">
+                                <svg class="btn-social-icon">
+                                        <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                            
                     </div>
                     <div class="sidebar__footer--legal">
                             &copy; 2017 by Halom Vered. All rights reserved.
@@ -61,7 +66,17 @@
 
         </header>
         <main class="main-content">
-            
+            <canvas class="main-content__canvas"></canvas>
+            <div class="main-content__hero-box">
+                    <div class="main-content__field">
+                        <h1 class="main-content__text">
+                                Hi, I'm Halom, a Front-End Developer.
+                        </h1>
+                    </div>
+                    <div class="main-content__cta">
+                        <span class="btn-solid btn-solid--animated btn-solid--breathing">let's work together</span>
+                    </div>
+            </div>
         </main>
     </div>
 

@@ -1,6 +1,49 @@
 .main-content {
-    background-color: var(--color-primary-5);
-    flex: 1;
+    &__canvas {
+        z-index: 3;
+    }
 
-    height: 75rem;
+    &__hero-box {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        height: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+    
+    &__field {
+        height: 7rem;
+        width: 77rem;
+        background-color: var(--color-primary-4-transparent);
+        border-radius: var(--border-radius);
+        border: 2px solid var(--color-primary-5-transparent);
+        box-shadow: var(--shadow-light);
+    }
+    
+    &__text {
+        color: var(--color-primary-3);
+        // font-size: 4rem;
+        line-height: 6rem;
+        font-weight: 700;
+        // text-transform: uppercase;
+        display: flex;
+        padding: 3.5px;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid var(--color-primary-3); /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
+    }
+
+    &__cta{
+        display: flex;
+        justify-content: center;
+    }
 }
