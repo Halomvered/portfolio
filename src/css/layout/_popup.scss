@@ -1,0 +1,66 @@
+.popup {
+    height: 90%;
+    background-color: var(--color-primary-1-transparent);
+    z-index: 4;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    transform: translate(-27%);
+    transition: all 1s ease-out;
+
+
+    &__content {
+        width: 100%;
+        border-radius: 3px;
+        display: table;
+        overflow: hidden;
+        opacity: 0;
+        transform: scale(0);
+        transition: all .4s .2s;
+    }
+
+    &__left {
+        width: 33.333333%;
+        display: table-cell;
+    }
+    
+    &__right {
+        width: 66.666667%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem 5rem;
+    }
+
+
+
+// Open states
+    &:target {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0);
+
+    }
+
+    &:target &__content {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &__close {
+        &:link,
+        &:visited {
+            color: var(--color-grey-dark-3);
+            text-decoration: none;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 3rem;
+            display: inline-block;
+            line-height: 1;
+            transition: all .2s;
+        }
+        &:hover {
+            color: var(--color-primary-4);
+        }
+    }
+}

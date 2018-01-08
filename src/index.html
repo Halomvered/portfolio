@@ -13,36 +13,43 @@
     <div class="container">
 
         <header class="sidebar">
-
             <div class="sidebar__logo">
                 <img src="../img/halom-logo.png" alt="Halom logo" class="logo">
             </div>
 
-            <nav class="sidebar__side-nav">
-                    <button class="sidebar__side-nav-item btn-js">
-                            <svg class="btn-js__visible btn-js-home">
-                                    <use xlink:href="img/sprite.svg#icon-home"></use>
-                            </svg>
-                            <span class="btn-js__invisible btn-js-span-home">Home</span>
-                    </button>
-                    <button class="sidebar__side-nav-item btn-js">
-                            <svg class="btn-js__visible">
-                                    <use xlink:href="img/sprite.svg#icon-profile-male"></use>
-                            </svg>
-                            <span class="btn-js__invisible">About</span>
-                    </button>
-                    <button class="sidebar__side-nav-item btn-js">
-                            <svg class="btn-js__visible">
-                                    <use xlink:href="img/sprite.svg#icon-briefcase"></use>
-                            </svg>
-                            <span class="btn-js__invisible">Portfolio</span>
-                    </button>
-                    <button class="sidebar__side-nav-item btn-js">
-                            <svg class="btn-js__visible">
-                                    <use xlink:href="img/sprite.svg#icon-envelope"></use>
-                            </svg>
-                            <span class="btn-js__invisible">Contact</span>
-                    </button>
+            <nav class="sidebar__sidenav">
+                    <a href="#" class="sidebar__sidenav-item">
+                        <button class="btn-js">
+                                <svg class="btn-js__visible btn-js--home sidebar__sidenav-icon">
+                                        <use xlink:href="img/sprite.svg#icon-home"></use>
+                                </svg>
+                                <span class="btn-js__invisible btn-js-span--home">Home</span>
+                        </button>
+                    </a>
+                    <a href="#about" class="sidebar__sidenav-item">
+                        <button class="btn-js">
+                                <svg class="btn-js__visible sidebar__sidenav-icon">
+                                        <use xlink:href="img/sprite.svg#icon-profile-male"></use>
+                                </svg>
+                                <span class="btn-js__invisible">About</span>
+                        </button>
+                    </a>
+                    <a href="#" class="sidebar__sidenav-item">
+                        <button class="btn-js">
+                                <svg class="btn-js__visible sidebar__sidenav-icon">
+                                        <use xlink:href="img/sprite.svg#icon-briefcase"></use>
+                                </svg>
+                                <span class="btn-js__invisible">Portfolio</span>
+                        </button>
+                    </a>
+                    <a href="#" class="sidebar__sidenav-item">
+                        <button class="btn-js">
+                                <svg class="btn-js__visible sidebar__sidenav-icon">
+                                        <use xlink:href="img/sprite.svg#icon-envelope"></use>
+                                </svg>
+                                <span class="btn-js__invisible">Contact</span>
+                        </button>
+                    </a>
             </nav>
 
             <footer class="sidebar__footer">
@@ -67,17 +74,45 @@
         </header>
         <main class="main-content">
             <canvas class="main-content__canvas"></canvas>
-            <div class="main-content__hero-box">
-                    <div class="main-content__field">
-                        <h1 class="main-content__text">
-                                Hi, I'm Halom, a Front-End Developer.
-                        </h1>
-                    </div>
-                    <div class="main-content__cta">
-                        <span class="btn-solid btn-solid--animated btn-solid--breathing">let's work together</span>
-                    </div>
+            <div class="main-content__container">
+                <div class="main-content__hero-box">
+                        <div class="main-content__field u-margin-bottom-medium">
+                                <h1 class="main-content__text">
+                                        Hi, I'm Halom, a Front-End Developer.
+                                </h1>
+                        </div>
+                        <div class="main-content__cta">
+                                <span class="btn-solid btn-solid--animated">let's work together</span>
+                        </div>
+                </div>
+
+                <div class="popup" id="about">
+                        <div class="popup__content">
+                                <div class="popup__left">
+                                </div>
+                                <div class="popup__right">
+                                <a href="#" class="popup__close">&times;</a>
+                                <h2 class="heading-secondary u-margin-bottom-small">A little about me:</h2>
+
+                                <h3 class="heading-tertiary u-margin-bottom-tiny">Myself:</h3>
+                                <p class="paragraph">
+                                        I'm a web developer focused on front-end skills. Passionate about problem solving and learning new skills.
+                                </p>
+                                <h3 class="heading-tertiary u-margin-bottom-tiny">Knowledge, Environment And Skills:</h3>
+                                <p class="paragraph">
+                                        Javascript, CSS, HTML, Sass, Node, Express, Mongodb, Version Control, Webpack, Jqeury.
+                                </p>
+                                <h3 class="heading-tertiary u-margin-bottom-tiny">Current & Near-future studies:</h3>
+                                <p class="paragraph">
+                                        Angular, React, Python, Typescript, Mysql/Nosql.
+                                </p>
+                                </div>
+                        </div>
+                </div>
             </div>
         </main>
+
+        
     </div>
 
 </body>
