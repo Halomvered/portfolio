@@ -1,5 +1,5 @@
 .popup {
-    height: 90%;
+    height: 100%;
     background-color: var(--color-primary-1-transparent);
     z-index: 4;
     opacity: 0;
@@ -8,29 +8,41 @@
     transform: translate(-27%);
     transition: all 1s ease-out;
 
+    &__canvas {
+        cursor: crosshair;
+        background-color: var(--color-primary-4-transparent);
+        border-radius: var(--border-radius);
+        }
 
     &__content {
         width: 100%;
         border-radius: 3px;
-        display: table;
+        display: flex;
+        flex-direction: column;
         overflow: hidden;
         opacity: 0;
         transform: scale(0);
         transition: all .4s .2s;
     }
 
-    &__left {
-        width: 33.333333%;
-        display: table-cell;
-    }
-    
-    &__right {
-        width: 66.666667%;
-        display: table-cell;
+    &__top {
         vertical-align: middle;
         padding: 3rem 5rem;
+        text-align: center;
     }
-
+    
+    &__bottom {
+        z-index: 6;
+        flex: 0 0 60%;
+        background-color: none;
+        text-align: center;
+        
+        &--text {
+            @include centerAbsolute;
+            transform: translateX(-50%);
+        }
+    }
+    
 
 
 // Open states

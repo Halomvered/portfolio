@@ -1,5 +1,5 @@
 // Exporting to app.js
-export var randomFadingCircles = function (element, radiusRange, changeRate, colorArray, circleNum) {
+export var randomFadingCircles = function (element, radiusRange, changeRate, colorsMain, circleNum) {
 
 // Set variables for the element in which you want to create it + set its context
 // in a variable.
@@ -57,7 +57,7 @@ function Circle(x, y, dx, dy, radius, changeRate) {
     this.changeRate = (Math.random() < 0.5 ? -1 : 1) * changeRate;
 
     // Randomaly selected color from a predefined array of colors.
-    this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
+    this.color = colorsMain[Math.floor(Math.random() * colorsMain.length)];
 
     // Method for circle creation.
     this.draw = function(){
@@ -85,14 +85,17 @@ function Circle(x, y, dx, dy, radius, changeRate) {
         this.x += this.dx;
         this.y += this.dy;
 
+        // Make the radius shrink when it reaches maximum size.
         if (this.radius > this.maxRadius && this.changeRate > 0) {
             this.changeRate = -this.changeRate;
         } 
+        // Make the radius grow when it reaches minimum size.
         if (this.radius < this.minRadius && this.changeRate < 0) {
             this.changeRate = -this.changeRate;
         } 
         
-        
+        // Generate the the next circle in its next position according to its
+        // radius growth/shrink ratio.
         this.radius += this.changeRate;
         
 
