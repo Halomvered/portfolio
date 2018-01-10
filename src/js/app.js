@@ -3,7 +3,7 @@ import '../contentscript.html';
 import {randomFadingCircles} from './scripts/randomFadingCircles.js';
 import {canvasWriting} from './scripts/canvasWriting.js';
 
-// SETUP FOR USING randomFadingCircles()
+// SETUP FOR USING randomFadingCircles
 // Insert the class of the canvas element you'd like to work with.
 var elementMain = '.main-content__canvas';
 // // Set the maximum radius that a circle can grow to.
@@ -21,7 +21,7 @@ var colorsMain = [
 var circleNum = 80;
 
 
-// SETUP FOR USING randomFadingCircles()
+// SETUP FOR USING canvasWriting
 // Insert the class of the canvas element you'd like to work with.
 var elementPopup = '.popup__canvas';
 // Define the minimum font size that will be drawn on the canvas.
@@ -29,7 +29,7 @@ var minFontSize = 15;
 // Set the text font.
 var canvasfont = "Roboto";
 // Set the text that will be drawn on the canvas.
-var letters = "Javascript, CSS, HTML, Sass, Node, Express, Mongodb, Version Control, Webpack, Jqeury, Ajax, API, REST, Illustrator, Photoshop, Bootstrap.";
+var letters = "Javascript, CSS, HTML, Sass, Node, Express, MongoDB, Version Control, Webpack, Jqeury, Ajax, API, REST, Illustrator, Photoshop, Bootstrap.";
 
 randomFadingCircles(elementMain, radiusRange, changeRate, colorsMain, circleNum);
 canvasWriting(elementPopup, minFontSize, canvasfont, letters);

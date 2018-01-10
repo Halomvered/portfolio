@@ -36,10 +36,17 @@
         flex: 0 0 60%;
         background-color: none;
         text-align: center;
-        
-        &--text {
+
+        &--header {
+            color: var(--color-primary-1);
             @include centerAbsolute;
             transform: translateX(-50%);
+            top: 45%;
+        }
+        &--text {
+            color: var(--color-primary-1);
+            @include centerAbsolute;
+            transform: translate(-50%, 60%);
         }
     }
     

@@ -46,11 +46,16 @@ export var canvasWriting = function (element, minFontSize, canvasfont, letters) 
     draw();
     }
     
+
     function draw() {
     if ( mouse.down ) {
+     // Calculate the distance traversed since the mouse was clicked.
      var d = distance( position, mouse );
+     // Adjust the fontsize according to how quickly the mouse traversed said distance.
      var fontSize = minFontSize + d/2;
+     // Move letter by letter of the string by use of counter.
      var letter = letters[counter];
+     // Find the width of the letter.
      var stepSize = textWidth( letter, fontSize );
      
      if (d > stepSize) {
@@ -63,7 +68,7 @@ export var canvasWriting = function (element, minFontSize, canvasfont, letters) 
       c.rotate( angle );
       c.fillText(letter,0,0);
       c.restore();
-    
+      // Increment the counter.
       counter++;
       if (counter > letters.length-1) {
        counter = 0;
@@ -75,7 +80,7 @@ export var canvasWriting = function (element, minFontSize, canvasfont, letters) 
       }
     }  
     }
-    
+    // Calculate the distance made by the mouse.
     function distance( pt, pt2 ){
     
     var xs = 0;
@@ -89,26 +94,26 @@ export var canvasWriting = function (element, minFontSize, canvasfont, letters) 
     
     return Math.sqrt( xs + ys );
     }
-    
+    // Set mouse.down to true on mousedown event and record its coordinates on the screen.
     function mouseDown( event ){
     mouse.down = true;
     position.x = event.offsetX;
     position.y = event.offsetY;
-    
+    // On mousedown make the canvas instructions text disappear.
     document.querySelector('.popup__bottom--text').style.display = 'none';
      
     }
-    
+    // On mouse up set mouse.down to false.
     function mouseUp( event ){
      mouse.down = false;
     }
-    
+    //On doubleclick event, restart the canvas & counter and restore the instructions text.
     function doubleClick( event ) {
     canvas.width = canvas.width;
     counter = 0;
     document.querySelector('.popup__bottom--text').style.display = 'block';
     }
-    
+    // Find text width according to the letter and fontsize while mouse is down and moving.
     function textWidth( string, size ) {
     c.font = size + "px Georgia";
     
@@ -119,7 +124,7 @@ export var canvasWriting = function (element, minFontSize, canvasfont, letters) 
     }
     
     };
-    
+    // Start the canvas setup.
     init();
 
 
