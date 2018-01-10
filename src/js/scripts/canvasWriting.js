@@ -34,8 +34,8 @@ export var canvasWriting = function (element, minFontSize, canvasfont, letters) 
     canvas.addEventListener('dblclick', doubleClick, false);
     
     addEventListener('resize', () => {
-            canvas.width = innerWidth
-            canvas.height = innerHeight
+        canvas.width  = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
         });
     
 
@@ -100,7 +100,7 @@ export var canvasWriting = function (element, minFontSize, canvasfont, letters) 
     position.x = event.offsetX;
     position.y = event.offsetY;
     // On mousedown make the canvas instructions text disappear.
-    document.querySelector('.popup__bottom--text').style.display = 'none';
+    document.querySelector('.popup__right--text').style.display = 'none';
      
     }
     // On mouse up set mouse.down to false.
@@ -111,7 +111,7 @@ export var canvasWriting = function (element, minFontSize, canvasfont, letters) 
     function doubleClick( event ) {
     canvas.width = canvas.width;
     counter = 0;
-    document.querySelector('.popup__bottom--text').style.display = 'block';
+    document.querySelector('.popup__right--text').style.display = 'block';
     }
     // Find text width according to the letter and fontsize while mouse is down and moving.
     function textWidth( string, size ) {
@@ -124,8 +124,7 @@ export var canvasWriting = function (element, minFontSize, canvasfont, letters) 
     }
     
     };
-    // Start the canvas setup.
-    init();
+
 
 
 
