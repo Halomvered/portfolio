@@ -50,7 +50,7 @@
     // }
 }
 
-.visible_on-js {
+.highlight-nav--js {
     fill: var(--color-primary-5);
 
 }
@@ -61,8 +61,9 @@
     &:visited {
         text-decoration: none;
         fill: var(--color-grey-light-4);
-    }
 
+    }
+    
     
     &-icon {
         height: 3rem;
@@ -70,12 +71,12 @@
         margin-right: 2rem;
         
         &:hover {
-            transform: translateY(-3px);
+            transform: scale(1.1) translateY(-3px);
             box-shadow: var(--shadow-dark);
-            fill: var(--color-primary-4);
+            fill: var(--color-primary-5);
     
             &::after {
-                transform: scalex(1.4) scaleY(1.4);
+                transform: scale(1.1) scalex(1.4) scaleY(1.4);
                 opacity: 0;
             }
         }

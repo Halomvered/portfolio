@@ -63,11 +63,11 @@
     &__close {
         &:link,
         &:visited {
-            color: var(--color-grey-dark-3);
+            color: var(--color-primary-3);
             text-decoration: none;
             position: absolute;
-            top: 2.5rem;
-            right: 2.5rem;
+            top: 1rem;
+            right: 1rem;
             font-size: 3rem;
             display: inline-block;
             line-height: 1;
@@ -75,7 +75,7 @@
             z-index: 10;
         }
         &:hover {
-            color: var(--color-primary-4);
+            color: var(--color-primary-5);
         }
     }
 }
