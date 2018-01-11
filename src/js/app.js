@@ -13,9 +13,9 @@ var elementMain = '.main-content__canvas';
 // // Set the minimum radius that a circle can shrink to.
 // var minRadius = 20;
 // // Set the range of size the of each circle is generated as.
-var radiusRange = 1.5;
+var radiusRange = 2;
 // // Set the range of size the of each circle is generated as.
-var changeRate = 0.005;
+var changeRate = 0.006;
 // Define an array of colors from which the circles are randomly generated.
 var colorsMain = [
     "rgba(255, 255, 255, 0.055)",

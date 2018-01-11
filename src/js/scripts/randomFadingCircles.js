@@ -70,13 +70,13 @@ function Circle(x, y, dx, dy, radius, changeRate) {
     // Method to define the circle's behaviour(direction, when it changes direction and
     // how much should it grow/shrink)
 
-    // Change the circle's direction when it reaches the canvas's border.
+    // Change the circle's direction when it reaches a bit beyond the canvas's border.
     this.update = function () {
-        if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+        if (this.x + this.radius > canvas.width + 50 || this.x - this.radius < -50) {
             this.dx = -this.dx;
         };
 
-        if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+        if (this.y + this.radius > canvas.height + 50 || this.y - this.radius < -50) {
             this.dy = -this.dy;
         }
 
