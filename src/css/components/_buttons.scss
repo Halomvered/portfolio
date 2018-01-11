@@ -28,6 +28,7 @@
     
     &:hover &__visible {
             fill: var(--color-primary-1);
+            stroke: var(--color-primary-1);
         }
 
     &:hover &__invisible {
@@ -47,9 +48,12 @@
     &-span--home {
         padding-top: 2.5rem;
     }
+}
 
-
-    
+.visible_on-js {
+    fill: var(--color-primary-4);
+    stroke: var(--color-primary-4);
+    stroke-width: .8px;
 }
 
 .btn-social {
@@ -60,11 +64,12 @@
         fill: var(--color-grey-light-4);
     }
 
+    
     &-icon {
         height: 3rem;
         width: 3rem;
         margin-right: 2rem;
-
+        
         &:hover {
             transform: translateY(-3px);
             box-shadow: var(--shadow-dark);
@@ -111,6 +116,7 @@
     &:hover {
         box-shadow: var(--shadow-dark);
         transform: translateY(-3px);
+        border: 2px solid var(--color-primary-4);
         
         &::after {
             transform: scalex(1.4) scaleY(1.4);

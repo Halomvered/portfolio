@@ -1,4 +1,4 @@
-export var clickAndDrad = function (scrollSpeed) {
+export var clickAndDrag = function (scrollSpeed) {
 
     // Selecet the clickndrag-nav element.
     const slider = document.querySelector('.clickndrag-nav');

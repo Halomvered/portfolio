@@ -2,7 +2,8 @@ import '../css/main.scss';
 import '../contentscript.html';
 import {randomFadingCircles} from './scripts/randomFadingCircles.js';
 import {canvasWriting} from './scripts/canvasWriting.js';
-import {clickAndDrad} from './scripts/clickAndDrad.js';
+import {clickAndDrag} from './scripts/clickAndDrag.js';
+import {toggleClass} from './scripts/toggleClass.js';
 
 // SETUP FOR USING randomFadingCircles
 // Insert the class of the canvas element you'd like to work with.
@@ -39,5 +40,6 @@ var scrollSpeed = 1.5;
 window.addEventListener('load', ev => {
     randomFadingCircles(elementMain, radiusRange, changeRate, colorsMain, circleNum);
     canvasWriting(elementPopup, minFontSize, canvasfont, letters);
-    clickAndDrad(scrollSpeed);
+    clickAndDrag(scrollSpeed);
+    toggleClass();
 });
