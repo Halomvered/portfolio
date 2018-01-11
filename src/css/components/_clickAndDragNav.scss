@@ -1,20 +1,20 @@
 .clickndrag-nav {
-    margin-left: -2.5px;
-    height:100%;
-    padding: 0 20rem;
-    width: 44.25%;
-    // border: 1px solid var(--color-white);
-    overflow-x: hidden scroll;
+    margin: auto auto;
+    height:99%;
+    padding: 0 4rem 0 20rem;
+    width: 99%;
+    overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
     user-select: none;
     cursor: pointer;
     transition: all 0.2s;
-    transform: scale(0.98);
+    transform: scale(1);
     will-change: transform;
     position: relative;
     font-size: 0;
     perspective: 500px;
+    border: 3px ridge var(--color-primary-5);
 
     &__item {
         margin-top: 3rem;
@@ -105,5 +105,5 @@
     background: var(--color-white-transparent);
     cursor: grabbing;
     cursor: -webkit-grabbing;
-    transform: scale(1) translateX(-1%);
+    transform: scale(1.01);
   }
