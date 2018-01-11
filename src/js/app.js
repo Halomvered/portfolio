@@ -2,6 +2,7 @@ import '../css/main.scss';
 import '../contentscript.html';
 import {randomFadingCircles} from './scripts/randomFadingCircles.js';
 import {canvasWriting} from './scripts/canvasWriting.js';
+import {clickAndDrad} from './scripts/clickAndDrad.js';
 
 // SETUP FOR USING randomFadingCircles
 // Insert the class of the canvas element you'd like to work with.
@@ -31,5 +32,12 @@ var canvasfont = "Roboto";
 // Set the text that will be drawn on the canvas.
 var letters = "Javascript, CSS, HTML, Sass, Node, Express, MongoDB, Version Control, Webpack, Jqeury, Ajax, API, REST, Illustrator, Photoshop, Bootstrap.";
 
-randomFadingCircles(elementMain, radiusRange, changeRate, colorsMain, circleNum);
-canvasWriting(elementPopup, minFontSize, canvasfont, letters);
+// SETUP FOR USING clickAndDrad
+// Insert the speed in which you want to scroller to move.
+var scrollSpeed = 1.5;
+
+window.addEventListener('load', ev => {
+    randomFadingCircles(elementMain, radiusRange, changeRate, colorsMain, circleNum);
+    canvasWriting(elementPopup, minFontSize, canvasfont, letters);
+    clickAndDrad(scrollSpeed);
+});

@@ -40,9 +40,9 @@ export var canvasWriting = function (element, minFontSize, canvasfont, letters) 
     
 
     // Find mouseclick coordinates and start the drawing function.
-    function mouseMove ( event ){
-        mouse.x = event.offsetX;
-        mouse.y = event.offsetY;
+    function mouseMove ( e ){
+        mouse.x = e.offsetX;
+        mouse.y = e.offsetY;
     draw();
     }
     
@@ -95,20 +95,23 @@ export var canvasWriting = function (element, minFontSize, canvasfont, letters) 
     return Math.sqrt( xs + ys );
     }
     // Set mouse.down to true on mousedown event and record its coordinates on the screen.
-    function mouseDown( event ){
+    function mouseDown( e ){
     mouse.down = true;
-    position.x = event.offsetX;
-    position.y = event.offsetY;
+    position.x = e.offsetX;
+    position.y = e.offsetY;
+
+    e.preventDefault();
     // On mousedown make the canvas instructions text disappear.
     document.querySelector('.popup__right--text').style.display = 'none';
+    
      
     }
     // On mouse up set mouse.down to false.
-    function mouseUp( event ){
+    function mouseUp( e ){
      mouse.down = false;
     }
     //On doubleclick event, restart the canvas & counter and restore the instructions text.
-    function doubleClick( event ) {
+    function doubleClick( e ) {
     canvas.width = canvas.width;
     counter = 0;
     document.querySelector('.popup__right--text').style.display = 'block';
