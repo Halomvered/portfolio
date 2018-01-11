@@ -13,12 +13,12 @@
     }
 
     &__visible {
-        height: 5rem;
+        height: 6rem;
         fill: var(--color-grey-light-4);
     }
     
     &__invisible {
-        padding: 1.5rem 0;
+        padding: 2.2rem 0;
         position: absolute;
         left: 0;
         top: 0;
@@ -28,7 +28,7 @@
     
     &:hover &__visible {
             fill: var(--color-primary-1);
-            stroke: var(--color-primary-1);
+ 
         }
 
     &:hover &__invisible {
@@ -39,21 +39,20 @@
         outline: none;
     }
 
-    &--home {
-        stroke: var(--color-primary-1);
-        stroke-width: 1.4px;
-        height: 6.7rem;
-    }
+    // &--home {
+    //     stroke: var(--color-primary-1);
+    //     stroke-width: 1.4px;
+    //     height: 6.7rem;
+    // }
 
-    &-span--home {
-        padding-top: 2.5rem;
-    }
+    // &-span--home {
+    //     padding-top: 2.5rem;
+    // }
 }
 
 .visible_on-js {
-    fill: var(--color-primary-4);
-    stroke: var(--color-primary-4);
-    stroke-width: .8px;
+    fill: var(--color-primary-5);
+
 }
 
 .btn-social {
@@ -116,7 +115,8 @@
     &:hover {
         box-shadow: var(--shadow-dark);
         transform: translateY(-3px);
-        border: 2px solid var(--color-primary-4);
+        border: 2px solid var(--color-primary-2-light);
+        color: var(--color-primary-2-light);
         
         &::after {
             transform: scalex(1.4) scaleY(1.4);
