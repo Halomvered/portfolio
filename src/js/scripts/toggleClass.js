@@ -4,24 +4,26 @@ export var toggleClass = function () {
     document.addEventListener('click', e => {
         var target = e.target;
         
-        // Event delegation to target only clicks on sidenav or the call to action button.
-        if (target.getAttribute("class") === 'btn-js__invisible' || 
-        target.getAttribute("class").includes('btn-higlight-js')) {
+        // Event delegation to target only clicks on sidenav, call to action button, or window close buttons.
+        if (target.getAttribute("class").includes('navMarker--js')) {
 
-            // All sidenav items are stored in a var.
-            var sideNavItems = [...document.querySelectorAll('.btn-js__invisible')];
+            // All sidenav icons are stored in a var.
+            var sideNavItems = [...document.querySelectorAll('.btn-js__visible')];
 
             // Turn off all current highlighted items.
             sideNavItems.forEach(element => {
-                element.previousElementSibling.classList.remove('highlight-nav--js');
+                element.classList.remove('highlight-nav--js');
             });
 
-            // If the call to action button was called, toggle the active class on the contact icon in the side nav.
-            if (target.getAttribute("class").includes('btn-higlight-js')) {
-                sideNavItems[sideNavItems.length - 1].previousElementSibling.classList.toggle('highlight-nav--js');
-            } else {
-                // Toggle the relevant class on the SVG element of the clicked item.
+            // If a side-nav button was pressed, highlight it.
+            if (target.getAttribute("class").includes('btn-js__invisible')) {
                 target.previousElementSibling.classList.toggle('highlight-nav--js');
+            // If the call to action button was pressed highlight the contact icon.
+            } else if (target.getAttribute("class").includes('cta--js')) {
+                sideNavItems[sideNavItems.length - 1].classList.toggle('highlight-nav--js');
+            // if the close-window button was pressed, highlight the home icon.
+            } else {
+                sideNavItems[0].classList.toggle('highlight-nav--js');
             }
             
         }
