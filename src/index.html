@@ -42,7 +42,7 @@
                                 <span class="btn-js__invisible navMarker--js">Portfolio</span>
                         </button>
                     </a>
-                    <a href="#" class="sidebar__sidenav-item">
+                    <a href="#contact" class="sidebar__sidenav-item">
                         <button class="btn-js">
                                 <svg class="btn-js__visible sidebar__sidenav-icon">
                                         <use xlink:href="img/sprite2.svg#icon-envelope2"></use>
@@ -82,7 +82,7 @@
                                 </h1>
                         </div>
                         <div class="main-content__cta">
-                                <span class="btn-solid btn-solid--animated navMarker--js cta--js">let's work together</span>
+                                <a href="#contact"><span class="btn-solid btn-solid--animated navMarker--js cta--js">let's work together</span></a>
                         </div>
                 </div>
 
@@ -100,7 +100,7 @@
                                                 My Knowledge & Skills:
                                         </h3>
                                         <p class="paragraph">
-                                                        Javascript, CSS, Sass, HTML, Node, Jqeury, Express, MongoDB, Illustrator, Photoshop, Version Control, Webpack, Bootstrap.
+                                                        Javascript, CSS, Sass, HTML, Node, Express, MongoDB, Jqeury, Illustrator, Photoshop, Version Control, Webpack, Bootstrap.
                                         </p>
                                 </div>
                                 <div class="popup__right">
@@ -122,8 +122,7 @@
                                                                 <span>for suggested</span>
                                                                 <span>content:</span>
                                                                 <span>A Javascript</span>
-                                                                <span>mini-project.</span>
-                                                                
+                                                                <span>mini-project.</span>                                                                
                                                         </figcaption>
                                                 </div>
                                                 <div class="clickndrag-nav__item item-2">
@@ -151,6 +150,51 @@
                                                         <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project9">
                                                 </div>
                                         </div>                                
+                        </div>
+                </div>
+                <div class="popup" id="contact">
+                        <div class="popup__content">
+                                <a href="#" class="popup__close navMarker--js">&times;</a>
+                                <div class="contact">
+                                        <div class="contact__form">
+                                                <form action="#" class="form">
+                                                        <h2 class="heading-secondary u-margin-bottom-small">
+                                                        Tell me about your project!
+                                                        </h2>
+                                                <div class="form__group">
+                                                        <input type="text" class="form__input" placeholder="Full Name" id="name" required>
+                                                        <label for="name" class="form__label">Full name</label>
+                                                </div>
+                
+                                                <div class="form__group">
+                                                        <input type="email" class="form__input" placeholder="Email Adress" id="email" required>
+                                                        <label for="email" class="form__label">Email adress</label>
+                                                </div>
+                
+                                                <div class="form__group u-margin-bottom-medium">
+                                                        <div class="form__radio-group">
+                                                        <input type="radio" class="form__radio-input" id="small" name="size">
+                                                        <label for="small" class="form__radio-label">
+                                                                <span class="form__radio-button"></span>
+                                                                Full-time position
+                                                        </label>
+                                                        </div>
+                                                        
+                                                        <div class="form__radio-group">
+                                                        <input type="radio" class="form__radio-input" id="large" name="size">
+                                                        <label for="large" class="form__radio-label">
+                                                                <span class="form__radio-button"></span>
+                                                                Freelance work
+                                                        </label>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="form__group">
+                                                        <button class="btn-solid btn-solid--secondary">Send</button>
+                                                </div>
+                                                </form>
+                                        </div>
+                                </div>
                         </div>
                 </div>
         </main>

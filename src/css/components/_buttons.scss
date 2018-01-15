@@ -118,6 +118,18 @@
         }
     }
 
+    &--secondary {
+        background-color: var(--color-primary-2-dark);
+        
+        &:hover {
+            box-shadow: var(--shadow-dark);
+            transform: translateY(-3px);
+            border: 2px solid var(--color-white);
+            color: var(--color-white);
+            background-color: var(--color-primary-2-dark);
+        }
+    }
+
     &:active,
     &:focus {
         outline: none;
@@ -137,6 +149,8 @@
         z-index: -1;
         transition: all .4s;
     }
+
+   
 
     &--animated {
         animation: ctaAppearence .5s ease-out 4s;
