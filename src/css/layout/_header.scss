@@ -10,13 +10,13 @@
         padding: 2rem 0;
     }
 
-    &__sidenav {
-        // margin-top: -2.5rem;
-        
-        &-icon {
+    &__side-nav {
+        margin-top: -2.5rem;
+        &-item {
             &:not(:last-child) {
-                margin-bottom: 3rem;
+                margin-bottom: 5rem;
             }
+            
         }
     }
 
