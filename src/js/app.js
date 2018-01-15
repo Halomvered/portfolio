@@ -4,6 +4,7 @@ import {randomFadingCircles} from './scripts/randomFadingCircles.js';
 import {canvasWriting} from './scripts/canvasWriting.js';
 import {clickAndDrag} from './scripts/clickAndDrag.js';
 import {toggleClass} from './scripts/toggleClass.js';
+import {contactForm} from './scripts/contactForm.js';
 
 // SETUP FOR USING randomFadingCircles
 // Insert the class of the canvas element you'd like to work with.
@@ -42,4 +43,5 @@ window.addEventListener('load', ev => {
     canvasWriting(elementPopup, minFontSize, canvasfont, letters);
     clickAndDrag(scrollSpeed);
     toggleClass();
+    contactForm();
 });

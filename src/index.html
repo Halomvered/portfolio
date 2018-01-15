@@ -156,44 +156,53 @@
                         <div class="popup__content">
                                 <a href="#" class="popup__close navMarker--js">&times;</a>
                                 <div class="contact">
-                                        <div class="contact__form">
-                                                <form action="#" class="form">
-                                                        <h2 class="heading-secondary u-margin-bottom-small">
-                                                        Tell me about your project!
-                                                        </h2>
-                                                <div class="form__group">
-                                                        <input type="text" class="form__input" placeholder="Full Name" id="name" required>
-                                                        <label for="name" class="form__label">Full name</label>
-                                                </div>
-                
-                                                <div class="form__group">
-                                                        <input type="email" class="form__input" placeholder="Email Adress" id="email" required>
-                                                        <label for="email" class="form__label">Email adress</label>
-                                                </div>
-                
-                                                <div class="form__group u-margin-bottom-medium">
-                                                        <div class="form__radio-group">
-                                                        <input type="radio" class="form__radio-input" id="small" name="size">
-                                                        <label for="small" class="form__radio-label">
-                                                                <span class="form__radio-button"></span>
-                                                                Full-time position
-                                                        </label>
+                                        <form action="#" class="form" id="contactForm">
+                                                <div class="form--left">
+                                                        <h3 class="heading-tertiary--red u-margin-bottom-small">Your Details</h3>
+
+                                                        <div class="form__group">
+                                                                <input type="text" class="form__input" placeholder="Full Name" name="name">
+                                                                <!-- required -->
+                                                                <label for="name" class="form__label">Full name</label>
                                                         </div>
-                                                        
-                                                        <div class="form__radio-group">
-                                                        <input type="radio" class="form__radio-input" id="large" name="size">
-                                                        <label for="large" class="form__radio-label">
-                                                                <span class="form__radio-button"></span>
-                                                                Freelance work
-                                                        </label>
+                        
+                                                        <div class="form__group">
+                                                                <input type="email" class="form__input" placeholder="Email Adress" name="email">
+                                                                <!-- required -->
+                                                                <label for="email" class="form__label">Email adress</label>
+                                                        </div>
+                        
+                                                        <h3 class="heading-tertiary--red u-margin-bottom-small">Your'e looking for a</h3>
+
+                                                        <div class="form__group-radio">
+                                                                <div class="form__radio-group">
+                                                                <input type="radio" class="form__radio-input" id="fulltime" name="workType">
+                                                                <label for="fulltime" class="form__radio-label">
+                                                                        <span class="form__radio-button"></span>
+                                                                        Full-time employee
+                                                                </label>
+                                                                </div>
+                                                                
+                                                                <div class="form__radio-group">
+                                                                <input type="radio" class="form__radio-input" id="freelance" name="workType">
+                                                                <label for="freelance" class="form__radio-label">
+                                                                        <span class="form__radio-button"></span>
+                                                                        Freelancer
+                                                                </label>
+                                                                </div>
                                                         </div>
                                                 </div>
-                                                
-                                                <div class="form__group">
-                                                        <button class="btn-solid btn-solid--secondary">Send</button>
+                                                <div class="form--right">
+                                                        <div class="form__group">
+                                                                <h3 class="heading-tertiary u-margin-bottom-small">Tell me about your project!</h3>
+                                                                <textarea name="message" class="form__textarea" rows="10" cols="50" placeholder="Your message goes here..."></textarea>
+                                                                <!-- required -->
+                                                        </div>
+                                                        <div class="form__group-button">
+                                                                <button class="btn-solid btn-solid--secondary" type="submit">Send</button>
+                                                        </div>
                                                 </div>
-                                                </form>
-                                        </div>
+                                        </form>
                                 </div>
                         </div>
                 </div>
