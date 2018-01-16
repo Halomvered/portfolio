@@ -33,5 +33,7 @@
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.7.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "little-loader": "^0.2.0"
+  }
 }

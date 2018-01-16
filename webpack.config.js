@@ -76,5 +76,7 @@ module.exports = {
         //     chunks: []
         // }),
         new CleanWebpackPlugin(['dist'])
-    ]
+    ], externals: {
+        firebase: "firebase"
+    }
 };

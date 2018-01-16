@@ -6,6 +6,7 @@ import {clickAndDrag} from './scripts/clickAndDrag.js';
 import {toggleClass} from './scripts/toggleClass.js';
 import {contactForm} from './scripts/contactForm.js';
 
+
 // SETUP FOR USING randomFadingCircles
 // Insert the class of the canvas element you'd like to work with.
 var elementMain = '.main-content__canvas';
