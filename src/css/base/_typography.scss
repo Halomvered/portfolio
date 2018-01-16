@@ -32,6 +32,10 @@ body {
         text-transform: uppercase;
         color: var(--color-primary-2-dark);
     }
+    &--green {
+        text-transform: uppercase;
+        color: rgb(0, 255, 0);
+    }
 }
 
 .paragraph {

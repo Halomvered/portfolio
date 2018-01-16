@@ -14,9 +14,13 @@ export var contactForm = function () {
     // Reference messsages collections
     var messagesRef = firebase.database().ref('messages');
     
-    // Listen for form submit
-    document.querySelector('#contactForm').addEventListener('submit', submitForm);
+    // Store contact form in var
+    var contactForm = document.querySelector('#contactForm');
 
+    // Listen for form submit
+    contactForm.addEventListener('submit', submitForm);
+
+    // Submit form
     function submitForm(e) {
         e.preventDefault();
         // Create object for form input
@@ -25,14 +29,32 @@ export var contactForm = function () {
         [...document.querySelectorAll('input, textarea')].forEach( item => {
             // Check to see which radio button was pressed.
             if (item.name === 'workType' && item.checked) {
-                contactInput[item.id] = item.checked;
+                contactInput[item.name] = item.id;
             // Get other values, as long as they don't come from the remaining radio button.
             } else if (item.name !== 'workType') {
                 contactInput[item.name] = item.value;
             }
-        });
-
-        console.log(contactInput);
+        });    
         
+        
+        // Save message for firebase.
+        saveMessage(contactInput);
+        
+        // Show authentication message
+        document.querySelector('#auth--js').classList.toggle("active");
+
+        setTimeout(() => {
+            document.querySelector('#auth--js').classList.toggle("active");
+        }, 3000);
+
+        // Reset contactForm
+        contactForm.reset();
     }
+
+    // Save message for firebase
+    function saveMessage(contactInput) {
+        var newMessageRef = messagesRef.push();
+        newMessageRef.set(contactInput);
+    }
+
 };
