@@ -1,4 +1,4 @@
-export var toggleClass = function () {
+export var toggleNavHighligh = function () {
 
     // Highlight current icon for PC sidenav.
     document.addEventListener('click', e => {

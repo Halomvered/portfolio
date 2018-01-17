@@ -21,6 +21,19 @@
         border-radius: var(--border-radius);
         border: 2px solid var(--color-primary-5-transparent);
         box-shadow: var(--shadow-light);
+
+        opacity: 0;
+        margin-top: -330px;
+        z-index: -5;
+        transition-timing-function: linear, step-end, step-end;
+        
+        &.page-loaded {
+            opacity: 1;
+            margin-top: 0;
+            z-index: 3;
+            display: block;
+            transition: opacity .5s linear, margin-top .5s step-start, z-index .5s step-start;
+        }
     }
     
     &__text {
@@ -36,7 +49,7 @@
         white-space: nowrap; /* Keeps the content on a single line */
         letter-spacing: .15em; /* Adjust as needed */
         animation: 
-        typing 3.5s steps(30, end),
+        typing 4s steps(30, end) 4.6s,
         blink-caret .5s step-end infinite;
     }
 

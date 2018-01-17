@@ -11,7 +11,7 @@ export var contactForm = function () {
     };
     firebase.initializeApp(config);
 
-    // Reference messsages collections
+    // Reference messsages collectionsgit 
     var messagesRef = firebase.database().ref('messages');
     
     // Store contact form in var

@@ -1,26 +1,16 @@
-  // H1 typing animation
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--color-primary-3) }
-  }
-
-  @keyframes ctaAppearence {
-    0% {
-        opacity: 0;
-        transform: translateY(3rem);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  // H1 hero typing animation.
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
-@keyframes moveInButton {
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--color-primary-3) }
+}
+
+// Call to action slide to view animation.
+@keyframes ctaAppearence {
   0% {
       opacity: 0;
       transform: translateY(3rem);
@@ -31,6 +21,7 @@
   }
 }
 
+// Form input sent animation.
 @keyframes authentication {
   0% {
     display: none;
@@ -47,6 +38,8 @@
   }
 }
 
+
+// Button breathing animation.
 @keyframes breathing {
   0% {
     transform: scale(0.9);
@@ -62,5 +55,39 @@
 
   100% {
     transform: scale(0.9);
+  }
+}
+
+
+// Site preloader animation.
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  } 
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
   }
 }

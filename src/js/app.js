@@ -1,10 +1,11 @@
 import '../css/main.scss';
 import '../contentscript.html';
-import {randomFadingCircles} from './scripts/randomFadingCircles.js';
-import {canvasWriting} from './scripts/canvasWriting.js';
-import {clickAndDrag} from './scripts/clickAndDrag.js';
-import {toggleClass} from './scripts/toggleClass.js';
-import {contactForm} from './scripts/contactForm.js';
+import {randomFadingCircles} from './scripts/decoration/randomFadingCircles.js';
+import {preloaderOff} from './scripts/decoration/preloaderOff.js';
+import {canvasWriting} from './scripts/interaction/canvasWriting.js';
+import {clickAndDrag} from './scripts/interaction/clickAndDrag.js';
+import {toggleNavHighligh} from './scripts/function/toggleNavHighligh.js';
+import {contactForm} from './scripts/function/contactForm.js';
 
 
 // SETUP FOR USING randomFadingCircles
@@ -35,14 +36,23 @@ var canvasfont = "Roboto";
 // Set the text that will be drawn on the canvas.
 var letters = "Javascript, CSS, HTML, Sass, Node, Express, MongoDB, Version Control, Webpack, Jqeury, Ajax, API, REST, Illustrator, Photoshop, Bootstrap.";
 
-// SETUP FOR USING clickAndDrad
+// SETUP FOR USING clickAndDrag
 // Insert the speed in which you want to scroller to move.
 var scrollSpeed = 1.5;
+
+// SETUP FOR USING preloaderOff
+// Insert the number of milliseconds in which you want to animation to fade.
+var animationTimer = 3200;
+// Insert the number of milliseconds in which you want to entire element to fade.
+var entireTimer = 4000;
+
+
 
 window.addEventListener('load', ev => {
     randomFadingCircles(elementMain, radiusRange, changeRate, colorsMain, circleNum);
     canvasWriting(elementPopup, minFontSize, canvasfont, letters);
     clickAndDrag(scrollSpeed);
-    toggleClass();
+    toggleNavHighligh();
     contactForm();
+    preloaderOff(animationTimer, entireTimer);
 });

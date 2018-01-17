@@ -9,204 +9,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    
-    <div class="container">
-
-        <header class="sidebar">
-            <div class="sidebar__logo">
-                <img src="../img/halom-logo.png" alt="Halom logo" class="logo">
-            </div>
-
-            <nav class="sidebar__sidenav">
-                    <a href="#" class="sidebar__sidenav-item">
-                        <button class="btn-js">
-                                <svg class="btn-js__visible highlight-nav--js sidebar__sidenav-icon">
-                                        <use xlink:href="img/sprite2.svg#icon-home"></use>
-                                </svg>
-                                <span class="btn-js__invisible navMarker--js">Home</span>
-                        </button>
-                    </a>
-                    <a href="#about" class="sidebar__sidenav-item">
-                        <button class="btn-js">
-                                <svg class="btn-js__visible sidebar__sidenav-icon">
-                                        <use xlink:href="img/sprite2.svg#icon-profile"></use>
-                                </svg>
-                                <span class="btn-js__invisible navMarker--js">About</span>
-                        </button>
-                    </a>
-                    <a href="#portfolio" class="sidebar__sidenav-item">
-                        <button class="btn-js">
-                                <svg class="btn-js__visible sidebar__sidenav-icon">
-                                        <use xlink:href="img/sprite2.svg#icon-suitcase"></use>
-                                </svg>
-                                <span class="btn-js__invisible navMarker--js">Portfolio</span>
-                        </button>
-                    </a>
-                    <a href="#contact" class="sidebar__sidenav-item">
-                        <button class="btn-js">
-                                <svg class="btn-js__visible sidebar__sidenav-icon">
-                                        <use xlink:href="img/sprite2.svg#icon-envelope2"></use>
-                                </svg>
-                                <span class="btn-js__invisible navMarker--js">Contact</span>
-                        </button>
-                    </a>
-            </nav>
-
-            <footer class="sidebar__footer">
-                    <div class="sidebar__footer--social">
-                            <a href="#" class="btn-social">
-                                <svg class="btn-social-icon">
-                                        <use xlink:href="img/sprite.svg#icon-github"></use>
-                                </svg>
-                            </a>
-                            <a href="#" class="btn-social">
-                                <svg class="btn-social-icon">
-                                        <use xlink:href="img/sprite.svg#icon-linkedin2"></use>
-                                </svg>
-                            </a>
-                            
-                    </div>
-                    <div class="sidebar__footer--legal">
-                            &copy; 2017 by Halom Vered. All rights reserved.
-                    </div>
-            </footer>
-
-        </header>
-        <main class="main-content">
-            <canvas class="main-content__canvas"></canvas>
-
-                <div class="main-content__hero-box">
-                        <div class="main-content__field u-margin-bottom-medium">
-                                <h1 class="main-content__text">
-                                        Hi, I'm Halom, a Front-End Developer.
-                                </h1>
-                        </div>
-                        <div class="main-content__cta">
-                                <a href="#contact"><span class="btn-solid btn-solid--animated navMarker--js cta--js">let's work together</span></a>
-                        </div>
+        <div class="preloader">
+                <div class="preloader__folding-cube">
+                        <div class="sk-cube1 sk-cube"></div>
+                        <div class="sk-cube2 sk-cube"></div>
+                        <div class="sk-cube4 sk-cube"></div>
+                        <div class="sk-cube3 sk-cube"></div>
+                </div>
+        </div>
+        <div class="container">
+                <header class="sidebar">
+                <div class="sidebar__logo">
+                        <img src="../img/halom-logo.png" alt="Halom logo" class="logo">
                 </div>
 
-                <div class="popup" id="about">
-                        <div class="popup__content">
-                                <div class="popup__left">
+                <nav class="sidebar__sidenav">
+                        <a href="#" class="sidebar__sidenav-item">
+                                <button class="btn-js">
+                                        <svg class="btn-js__visible highlight-nav--js sidebar__sidenav-icon">
+                                                <use xlink:href="img/sprite2.svg#icon-home"></use>
+                                        </svg>
+                                        <span class="btn-js__invisible navMarker--js">Home</span>
+                                </button>
+                        </a>
+                        <a href="#about" class="sidebar__sidenav-item">
+                                <button class="btn-js">
+                                        <svg class="btn-js__visible sidebar__sidenav-icon">
+                                                <use xlink:href="img/sprite2.svg#icon-profile"></use>
+                                        </svg>
+                                        <span class="btn-js__invisible navMarker--js">About</span>
+                                </button>
+                        </a>
+                        <a href="#portfolio" class="sidebar__sidenav-item">
+                                <button class="btn-js">
+                                        <svg class="btn-js__visible sidebar__sidenav-icon">
+                                                <use xlink:href="img/sprite2.svg#icon-suitcase"></use>
+                                        </svg>
+                                        <span class="btn-js__invisible navMarker--js">Portfolio</span>
+                                </button>
+                        </a>
+                        <a href="#contact" class="sidebar__sidenav-item">
+                                <button class="btn-js">
+                                        <svg class="btn-js__visible sidebar__sidenav-icon">
+                                                <use xlink:href="img/sprite2.svg#icon-envelope2"></use>
+                                        </svg>
+                                        <span class="btn-js__invisible navMarker--js">Contact</span>
+                                </button>
+                        </a>
+                </nav>
+
+                <footer class="sidebar__footer">
+                        <div class="sidebar__footer--social">
+                                <a href="#" class="btn-social">
+                                        <svg class="btn-social-icon">
+                                                <use xlink:href="img/sprite.svg#icon-github"></use>
+                                        </svg>
+                                </a>
+                                <a href="#" class="btn-social">
+                                        <svg class="btn-social-icon">
+                                                <use xlink:href="img/sprite.svg#icon-linkedin2"></use>
+                                        </svg>
+                                </a>
+                                
+                        </div>
+                        <div class="sidebar__footer--legal">
+                                &copy; 2017 by Halom Vered. All rights reserved.
+                        </div>
+                </footer>
+
+                </header>
+                <main class="main-content">
+                <canvas class="main-content__canvas"></canvas>
+
+                        <div class="main-content__hero-box">
+                                <div class="main-content__field u-margin-bottom-medium">
+                                        <h1 class="main-content__text">
+                                                Hi, I'm Halom, a Front-End Developer.
+                                        </h1>
+                                </div>
+                                <div class="main-content__cta">
+                                        <a href="#contact"><span class="btn-solid btn-solid--animated navMarker--js cta--js">let's work together</span></a>
+                                </div>
+                        </div>
+
+                        <div class="popup" id="about">
+                                <div class="popup__content">
+                                        <div class="popup__left">
+                                                <a href="#" class="popup__close navMarker--js">&times;</a>
+                                                <h2 class="heading-secondary u-margin-bottom-small">A little about me:</h2>
+                
+                                                <h3 class="heading-tertiary u-margin-bottom-tiny">Myself:</h3>
+                                                <p class="paragraph">
+                                                        I'm a web developer focused on front-end skills. Passionate about problem solving and learning new skills.
+                                                </p>
+                                                <h3 class="heading-tertiary">
+                                                        My Knowledge & Skills:
+                                                </h3>
+                                                <p class="paragraph">
+                                                                Javascript, CSS, Sass, HTML, Node, Express, MongoDB, Jqeury, Illustrator, Photoshop, Version Control, Webpack, Bootstrap.
+                                                </p>
+                                        </div>
+                                        <div class="popup__right">
+                                                <canvas class="popup__canvas"></canvas>
+                                                <p class="popup__right--text">
+                                                        Starting from left to right: Use the mouse in this box to draw yourself a picture of my knowledge and skills. <br> (You can double-click to start over).
+                                                </p>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="popup" id="portfolio">
+                                <div class="popup__content">
+                                                <a href="#" class="popup__close navMarker--js">&times;</a>
+                                                <div class="clickndrag-nav">
+                                                        <div class="clickndrag-nav__item item-1">
+                                                                <img class="clickndrag-nav__item--img" src="../img/project1.png" alt="project1">
+                                                                <figcaption class="clickndrag-nav__item--caption">
+                                                                        <span>Keywords filter</span>
+                                                                        <span>for suggested</span>
+                                                                        <span>content:</span>
+                                                                        <span>A Javascript</span>
+                                                                        <span>mini-project.</span>                                                                
+                                                                </figcaption>
+                                                        </div>
+                                                        <div class="clickndrag-nav__item item-2">
+                                                                <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project2">
+                                                        </div>
+                                                        <div class="clickndrag-nav__item item-3">
+                                                                <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project3">
+                                                        </div>
+                                                        <div class="clickndrag-nav__item item-4">
+                                                                <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project4">
+                                                        </div>
+                                                        <div class="clickndrag-nav__item item-5">
+                                                                <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project5">
+                                                        </div>
+                                                        <div class="clickndrag-nav__item item-6">
+                                                                <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project6">
+                                                        </div>
+                                                        <div class="clickndrag-nav__item item-7">
+                                                                <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project7">
+                                                        </div>
+                                                        <div class="clickndrag-nav__item item-8">
+                                                                <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project8">
+                                                        </div>
+                                                        <div class="clickndrag-nav__item item-9">
+                                                                <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project9">
+                                                        </div>
+                                                </div>                                
+                                </div>
+                        </div>
+                        <div class="popup" id="contact">
+                                <div class="popup__content">
                                         <a href="#" class="popup__close navMarker--js">&times;</a>
-                                        <h2 class="heading-secondary u-margin-bottom-small">A little about me:</h2>
-        
-                                        <h3 class="heading-tertiary u-margin-bottom-tiny">Myself:</h3>
-                                        <p class="paragraph">
-                                                I'm a web developer focused on front-end skills. Passionate about problem solving and learning new skills.
-                                        </p>
-                                        <h3 class="heading-tertiary">
-                                                My Knowledge & Skills:
-                                        </h3>
-                                        <p class="paragraph">
-                                                        Javascript, CSS, Sass, HTML, Node, Express, MongoDB, Jqeury, Illustrator, Photoshop, Version Control, Webpack, Bootstrap.
-                                        </p>
-                                </div>
-                                <div class="popup__right">
-                                        <canvas class="popup__canvas"></canvas>
-                                        <p class="popup__right--text">
-                                                Starting from left to right: Use the mouse in this box to draw yourself a picture of my knowledge and skills. <br> (You can double-click to start over).
-                                        </p>
-                                </div>
-                        </div>
-                </div>
-                <div class="popup" id="portfolio">
-                        <div class="popup__content">
-                                        <a href="#" class="popup__close navMarker--js">&times;</a>
-                                        <div class="clickndrag-nav">
-                                                <div class="clickndrag-nav__item item-1">
-                                                        <img class="clickndrag-nav__item--img" src="../img/project1.png" alt="project1">
-                                                        <figcaption class="clickndrag-nav__item--caption">
-                                                                <span>Keywords filter</span>
-                                                                <span>for suggested</span>
-                                                                <span>content:</span>
-                                                                <span>A Javascript</span>
-                                                                <span>mini-project.</span>                                                                
-                                                        </figcaption>
-                                                </div>
-                                                <div class="clickndrag-nav__item item-2">
-                                                        <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project2">
-                                                </div>
-                                                <div class="clickndrag-nav__item item-3">
-                                                        <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project3">
-                                                </div>
-                                                <div class="clickndrag-nav__item item-4">
-                                                        <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project4">
-                                                </div>
-                                                <div class="clickndrag-nav__item item-5">
-                                                        <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project5">
-                                                </div>
-                                                <div class="clickndrag-nav__item item-6">
-                                                        <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project6">
-                                                </div>
-                                                <div class="clickndrag-nav__item item-7">
-                                                        <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project7">
-                                                </div>
-                                                <div class="clickndrag-nav__item item-8">
-                                                        <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project8">
-                                                </div>
-                                                <div class="clickndrag-nav__item item-9">
-                                                        <img class="clickndrag-nav__item--img" src="../img/comingsoon.png" alt="project9">
-                                                </div>
-                                        </div>                                
-                        </div>
-                </div>
-                <div class="popup" id="contact">
-                        <div class="popup__content">
-                                <a href="#" class="popup__close navMarker--js">&times;</a>
-                                <div class="contact">
-                                        <form action="#" class="form" id="contactForm">
-                                                <h3 class="heading-tertiary--green form__auth" id="auth--js">Your Message has been sent</h3>
-                                                <div class="form--left">
-                                                        <h3 class="heading-tertiary--red u-margin-bottom-small">Your Details</h3>
+                                        <div class="contact">
+                                                <form action="#" class="form" id="contactForm">
+                                                        <h3 class="heading-tertiary--green form__auth" id="auth--js">Your Message has been sent</h3>
+                                                        <div class="form--left">
+                                                                <h3 class="heading-tertiary--red u-margin-bottom-small">Your Details</h3>
 
-                                                        <div class="form__group">
-                                                                <input type="text" class="form__input" placeholder="Full Name" name="name" required>                                                        
-                                                                <label for="name" class="form__label">Full name</label>
-                                                        </div>
-                        
-                                                        <div class="form__group">
-                                                                <input type="email" class="form__input" placeholder="Email Adress" name="email" required>                                                        
-                                                                <label for="email" class="form__label">Email adress</label>
-                                                        </div>
-                        
-                                                        <h3 class="heading-tertiary--red u-margin-bottom-small">Your'e looking for a</h3>
-
-                                                        <div class="form__group-radio">
-                                                                <div class="form__radio-group">
-                                                                <input type="radio" class="form__radio-input" id="fulltime" name="workType">
-                                                                <label for="fulltime" class="form__radio-label">
-                                                                        <span class="form__radio-button"></span>
-                                                                        Full-time employee
-                                                                </label>
+                                                                <div class="form__group">
+                                                                        <input type="text" class="form__input" placeholder="Full Name" name="name" required>                                                        
+                                                                        <label for="name" class="form__label">Full name</label>
                                                                 </div>
-                                                                
-                                                                <div class="form__radio-group">
-                                                                <input type="radio" class="form__radio-input" id="freelance" name="workType">
-                                                                <label for="freelance" class="form__radio-label">
-                                                                        <span class="form__radio-button"></span>
-                                                                        Freelancer
-                                                                </label>
+                                
+                                                                <div class="form__group">
+                                                                        <input type="email" class="form__input" placeholder="Email Adress" name="email" required>                                                        
+                                                                        <label for="email" class="form__label">Email adress</label>
+                                                                </div>
+                                
+                                                                <h3 class="heading-tertiary--red u-margin-bottom-small">Your'e looking for a</h3>
+
+                                                                <div class="form__group-radio">
+                                                                        <div class="form__radio-group">
+                                                                        <input type="radio" class="form__radio-input" id="fulltime" name="workType">
+                                                                        <label for="fulltime" class="form__radio-label">
+                                                                                <span class="form__radio-button"></span>
+                                                                                Full-time employee
+                                                                        </label>
+                                                                        </div>
+                                                                        
+                                                                        <div class="form__radio-group">
+                                                                        <input type="radio" class="form__radio-input" id="freelance" name="workType">
+                                                                        <label for="freelance" class="form__radio-label">
+                                                                                <span class="form__radio-button"></span>
+                                                                                Freelancer
+                                                                        </label>
+                                                                        </div>
                                                                 </div>
                                                         </div>
-                                                </div>
-                                                <div class="form--right">
-                                                        <div class="form__group">
-                                                                <h3 class="heading-tertiary u-margin-bottom-small">Tell me about your project!</h3>
-                                                                <textarea name="message" class="form__textarea" rows="10" cols="50" placeholder="Your message goes here..." required></textarea>
-                                                                <!-- required -->
+                                                        <div class="form--right">
+                                                                <div class="form__group">
+                                                                        <h3 class="heading-tertiary u-margin-bottom-small">Tell me about your project!</h3>
+                                                                        <textarea name="message" class="form__textarea" rows="10" cols="50" placeholder="Your message goes here..." required></textarea>
+                                                                        <!-- required -->
+                                                                </div>
+                                                                <div class="form__group-button">
+                                                                        <button class="btn-solid btn-solid--secondary" type="submit">Send</button>
+                                                                </div>
                                                         </div>
-                                                        <div class="form__group-button">
-                                                                <button class="btn-solid btn-solid--secondary" type="submit">Send</button>
-                                                        </div>
-                                                </div>
-                                        </form>
+                                                </form>
+                                        </div>
                                 </div>
                         </div>
-                </div>
-        </main>
-    </div>
+                </main>
+        </div>
 </body>
 <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
 
