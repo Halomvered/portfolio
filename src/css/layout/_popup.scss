@@ -2,14 +2,16 @@
     width: 100%;
     background-color: var(--color-primary-1-transparent);
     z-index: 4;
-    opacity: 0;
-    visibility: hidden;
     display: flex;
     height: 60%;
     position: absolute;
     top: 40%;
+    opacity: 0;
+    visibility: hidden;
     transform: translate(-27%);
     transition: all 1s ease-out;
+
+
 
     &__canvas {
         cursor: crosshair;
@@ -25,6 +27,9 @@
         opacity: 0;
         transform: scale(0);
         transition: all .4s .2s;
+        @include respond (phone-tiny) {
+            overflow: scroll;
+        }
     }
 
     &__left {
@@ -44,6 +49,7 @@
             font-weight: 500;
             @include centerAbsolute;
             transform: translate(-10%, -40%);
+            
         }
     }
     

@@ -6,7 +6,6 @@
     }
 }
 
-
 @mixin centerAbsolute {
         position: absolute;
         top: 50%;
@@ -47,8 +46,29 @@ ORDER: Base + Typography > General layout + Grid > Page layout > Componenets
 1em = 16px;
 */
 @mixin respond($breakpoint) {
-    @if $breakpoint == phone {
+    @if $breakpoint == phone-tiny-3 {
+        @media only screen and (max-width: 28.75em) {@content};   //460
+    }
+    @if $breakpoint == phone-tiny-2 {
+        @media only screen and (max-width: 30.7em) {@content};   //491px
+    }
+    @if $breakpoint == phone-tiny-1 {
+        @media only screen and (max-width: 32.5em) {@content};   //520px
+    }
+    @if $breakpoint == phone-tiny {
+        @media only screen and (max-width: 35em) {@content};   //560px
+    }
+    @if $breakpoint == phone-small {
         @media only screen and (max-width: 37.5em) {@content};   //600px
+    }
+    @if $breakpoint == phone-med {
+        @media only screen and (max-width: 43.75em) {@content};   //650px
+    }
+    @if $breakpoint == phone-big {
+        @media only screen and (max-width: 43.75em) {@content};   //700px
+    }
+    @if $breakpoint == phone-land {
+        @media only screen and (max-width: 50em) {@content};   //800px
     }
     @if $breakpoint == tab-port {
         @media only screen and (max-width: 56.25em) {@content};   //900px

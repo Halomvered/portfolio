@@ -5,6 +5,7 @@ import {preloaderOff} from './scripts/decoration/preloaderOff.js';
 import {canvasWriting} from './scripts/interaction/canvasWriting.js';
 import {clickAndDrag} from './scripts/interaction/clickAndDrag.js';
 import {toggleNavHighligh} from './scripts/function/toggleNavHighligh.js';
+import {mobileNav} from './scripts/function/mobileNav.js';
 import {contactForm} from './scripts/function/contactForm.js';
 
 
@@ -53,6 +54,7 @@ window.addEventListener('load', ev => {
     canvasWriting(elementPopup, minFontSize, canvasfont, letters);
     clickAndDrag(scrollSpeed);
     toggleNavHighligh();
+    mobileNav();
     contactForm();
     preloaderOff(animationTimer, entireTimer);
 });

@@ -4,6 +4,13 @@
     overflow: hidden;
     font-size: 2.5rem;
 
+    @include respond(tab-port) {
+        font-size: 2.3rem;
+    }
+    @include respond(phone-big) {
+        font-size: 2rem;
+    }
+
     & > * {
         display: inline-block;
         height: 100%;
@@ -15,6 +22,14 @@
     &__visible {
         height: 6rem;
         fill: var(--color-grey-light-4);
+
+        @include respond(tab-port) {
+            height: 5rem;
+        }
+        @include respond(phone-big) {
+            height: 4.7rem;
+        }
+        
     }
     
     &__invisible {
@@ -23,6 +38,12 @@
         left: 0;
         top: 0;
         opacity: 0;
+        @include respond(tab-port) {
+            padding: 1.6rem;
+        }
+        @include respond(phone-tiny) {
+            padding: 1.7
+        }
     }
     
     

@@ -4,10 +4,16 @@
     background-color: var(--color-primary-3);
     box-shadow: var(--shadow-dark);
     display: flex;
-    // min-height: 80vh;
     border-radius: var(--border-radius);
-}
+    @include respond(tab-land) {
+        margin: 0;
+        max-width: 100%;
+    }
 
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+}
 
 .sidebar {
     background-color: var(--color-primary-1);
@@ -17,6 +23,16 @@
     flex-direction: column;
     justify-content: space-between;
     z-index: 5;
+
+    @include respond(tab-port) {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 10rem;
+    }
+    @include respond(phone-tiny) {
+        flex-direction: column;
+        align-content: center;
+    }
 }
 
 
@@ -49,6 +65,7 @@
     background-size: 100%;
     border-radius: 3px;
     box-shadow: var(--shadow-dark);
-    // text-align: center;
-    // padding: 3rem;
+    @include respond(phone-small) {
+        background-image: none;
+    }
 }
