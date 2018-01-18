@@ -46,6 +46,9 @@ ORDER: Base + Typography > General layout + Grid > Page layout > Componenets
 1em = 16px;
 */
 @mixin respond($breakpoint) {
+    @if $breakpoint == phone-tiny-4 {
+        @media only screen and (max-width: 22.5em) {@content};   //360
+    }
     @if $breakpoint == phone-tiny-3 {
         @media only screen and (max-width: 28.75em) {@content};   //460
     }
