@@ -36,7 +36,7 @@ h1 {
         text-transform: uppercase;
         color: var(--color-primary-2-dark);
         
-        @include respond(phone-small) {
+        @include respond(phone-land) {
             color: var(--color-primary-4);
         }
     }

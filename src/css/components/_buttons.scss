@@ -4,12 +4,10 @@
     overflow: hidden;
     font-size: 2.5rem;
 
-    @include respond(tab-port) {
-        font-size: 2.3rem;
+    @include respond(phone-land) {
+        font-size: 2.35rem;
     }
-    @include respond(phone-big) {
-        font-size: 2rem;
-    }
+
 
     & > * {
         display: inline-block;
@@ -41,8 +39,15 @@
         @include respond(tab-port) {
             padding: 1.6rem;
         }
+
         @include respond(phone-tiny) {
-            padding: 1.7
+            padding: 1.7rem;
+        }
+        // Managing the longest word.
+        &-long {
+            @include respond(tab-port) {
+                padding: 1.7rem 2rem 1.7rem 0;
+            }
         }
     }
     

@@ -54,6 +54,11 @@
 
     height: 75rem;
     width: 100%;
+
+    @include respond(phone-big) {
+        height: 100vh;
+        background-position: top center;
+    }
 }
 
 .contact {
@@ -65,7 +70,8 @@
     background-size: 100%;
     border-radius: 3px;
     box-shadow: var(--shadow-dark);
-    @include respond(phone-small) {
+    
+    @include respond(phone-land) {
         background-image: none;
     }
 }
