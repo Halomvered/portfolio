@@ -2,7 +2,7 @@ export var isIe = function () {
     
     //Check if browser is IE
     var version = detectIE()
-
+    
     // If not IE - turn off message for IE users, and turn on container visibility.
     if (!version) {
         document.querySelector('.ie-under-construction').classList.toggle('active');

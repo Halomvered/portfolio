@@ -129,6 +129,7 @@
         position: relative;
         box-shadow: var(--shadow-dark);
         transition: all .2s;
+        backface-visibility: hidden;
     }
     
     &:hover {
@@ -174,7 +175,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: -1;
+        z-index: 4;
         transition: all .4s;
     }
 

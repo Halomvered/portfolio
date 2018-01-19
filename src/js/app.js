@@ -50,7 +50,7 @@ var entireTimer = 4000;
 
 
 document.addEventListener('DOMContentLoaded', ev => {
-    isIe()    
+    isIe();
 });
 
 window.addEventListener('load', ev => {
