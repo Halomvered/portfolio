@@ -47,13 +47,16 @@ ORDER: Base + Typography > General layout + Grid > Page layout > Componenets
 */
 @mixin respond($breakpoint) {
     @if $breakpoint == phone-tiny-3 {
-        @media only screen and (max-width: 25.75em) {@content};   //491px
+        @media only screen and (max-width: 25.75em) {@content};   //412px
     }
     @if $breakpoint == phone-tiny-2 {
-        @media only screen and (max-width: 30.7em) {@content};   //491px
+        @media only screen and (max-width: 31.25em) {@content};   //500
     }
     @if $breakpoint == phone-tiny {
         @media only screen and (max-width: 35em) {@content};   //560px
+    }
+    @if $breakpoint == phone-med {
+        @media only screen and (max-width: 39.37em) {@content};   //630px
     }
     @if $breakpoint == phone-big {
         @media only screen and (max-width: 43.75em) {@content};   //700px

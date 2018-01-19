@@ -21,7 +21,7 @@ html {
     @include respond(phone-big) {
         // font-size: 50%;
     }
-    @include respond(phone-tiny) {
+    @include respond(phone-med) {
         font-size: 48%;
     }
     @include respond(phone-tiny-2) {

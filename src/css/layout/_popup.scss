@@ -11,7 +11,9 @@
     transform: translate(-27%);
     transition: all 1s ease-out;
 
-
+    @include respond(tab-port){
+        background-color: var(--color-primary-1);
+    }
 
     &__canvas {
         cursor: crosshair;

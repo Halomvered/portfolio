@@ -36,7 +36,7 @@ var minFontSize = 15;
 // Set the text font.
 var canvasfont = "Roboto";
 // Set the text that will be drawn on the canvas.
-var letters = "Javascript, CSS, HTML, Sass, Node, Express, MongoDB, Version Control, Webpack, Jqeury, Ajax, API, REST, Illustrator, Photoshop, Bootstrap.";
+var letters = "Javascript, CSS, HTML, Sass, Node, Express, MongoDB, Version Control, Webpack, Jquery, Ajax, API, REST, Illustrator, Photoshop, Bootstrap.";
 
 // SETUP FOR USING clickAndDrag
 // Insert the speed in which you want to scroller to move.
