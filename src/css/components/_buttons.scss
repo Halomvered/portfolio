@@ -20,6 +20,7 @@
     &__visible {
         height: 6rem;
         fill: var(--color-grey-light-4);
+        opacity: 1;
 
         @include respond(tab-port) {
             height: 5rem;
@@ -53,8 +54,8 @@
     
     
     &:hover &__visible {
-            fill: var(--color-primary-1);
- 
+            opacity: 0;
+            
         }
 
     &:hover &__invisible {
@@ -63,6 +64,7 @@
 
     &:focus {
         outline: none;
+        
     }
 }
 

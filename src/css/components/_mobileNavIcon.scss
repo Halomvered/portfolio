@@ -9,6 +9,7 @@
     cursor: pointer;
     z-index: 30;
     visibility: hidden;
+    background-color: var(--color-primary-1);
 
     @include respond(phone-tiny) {
         visibility: visible;
