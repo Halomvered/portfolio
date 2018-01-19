@@ -1,0 +1,16 @@
+.ie-under-construction {
+    height: 100vh;
+    width: 100%;
+    @include centerAbsolute2;
+    z-index: 100;
+    background-color: purple;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+}

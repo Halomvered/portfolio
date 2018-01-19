@@ -5,6 +5,9 @@
     box-shadow: var(--shadow-dark);
     display: flex;
     border-radius: var(--border-radius);
+    opacity: 0;
+    visibility: hidden;
+
     @include respond(tab-land) {
         margin: 0;
         max-width: 100%;
@@ -12,6 +15,11 @@
 
     @include respond(tab-port) {
         flex-direction: column;
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
     }
 }
 

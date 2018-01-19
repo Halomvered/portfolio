@@ -7,6 +7,7 @@ import {clickAndDrag} from './scripts/interaction/clickAndDrag.js';
 import {toggleNavHighligh} from './scripts/function/toggleNavHighligh.js';
 import {mobileNav} from './scripts/function/mobileNav.js';
 import {contactForm} from './scripts/function/contactForm.js';
+import {isIe} from './scripts/function/isIe.js';
 
 
 // SETUP FOR USING randomFadingCircles
@@ -48,6 +49,9 @@ var animationTimer = 3200;
 var entireTimer = 4000;
 
 
+document.addEventListener('DOMContentLoaded', ev => {
+    isIe()    
+});
 
 window.addEventListener('load', ev => {
     randomFadingCircles(elementMain, radiusRange, changeRate, colorsMain, circleNum);
