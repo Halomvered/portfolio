@@ -41,6 +41,7 @@
     @include respond(phone-tiny) {
         flex-direction: column;
         align-content: center;
+        flex: 0 0 13%;
     }
 }
 

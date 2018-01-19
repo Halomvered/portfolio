@@ -17,6 +17,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+
+        @include respond(phone-tiny) {
+            padding-top: 23rem;
+        }
     }
     
     &__field {

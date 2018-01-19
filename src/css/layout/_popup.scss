@@ -14,6 +14,10 @@
     @include respond(tab-port){
         background-color: var(--color-primary-1);
     }
+    @include respond(phone-tiny-2){
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
 
     &__canvas {
         cursor: crosshair;
