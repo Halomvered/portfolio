@@ -62,7 +62,7 @@
         white-space: nowrap; /* Keeps the content on a single line */
         letter-spacing: .15em; /* Adjust as needed */
         animation: 
-        typing 4s steps(30, end) 4.6s,
+        typing 4s steps(30, end) 4s,
         blink-caret .5s step-end infinite;
 
         @include respond(phone-land) {
@@ -79,5 +79,13 @@
         margin-bottom: -4rem;
         justify-content: center;
         z-index: 4;
+        opacity: 1;
+        visibility: visible;
+        transition: all .2s;
+
+        &.active{
+            opacity: 0;
+            visibility: none;
+        }
     }
 }
