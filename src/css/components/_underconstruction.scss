@@ -1,16 +1,39 @@
 .ie-under-construction {
-    height: 100vh;
-    width: 100%;
+    height: 0vh;
+    width: 0%;
     @include centerAbsolute2;
+    overflow:hidden;
     z-index: 100;
-    background-color: purple;
+    background-color: var(--color-primary-4);
     opacity: 0;
     visibility: hidden;
+
+    // Make the IE users message appear 3 seconds later, in case of a lag
+    // in the script that checks which browser the user uses.
+    animation: elementAppear 0s ease-in 3s forwards;
+    animation-fill-mode: forwards;
 
     &.active {
         opacity: 1;
         visibility: visible;
     }
 
+    &__icon {
+        z-index: 101;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10rem;
+        width: 25%;
+    }
 
+    &__text {
+        z-index: 101;
+        text-align: center;
+        display: block;
+        margin-top: -2rem;
+        background-color: var(--color-primary-1);
+        font-size: 4rem;
+        font-weight: 700;
+    }
 }
