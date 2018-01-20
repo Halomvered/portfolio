@@ -11,14 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-        <div class="preloader">
+        <!-- <div class="preloader">
                 <div class="preloader__folding-cube">
                         <div class="sk-cube1 sk-cube"></div>
                         <div class="sk-cube2 sk-cube"></div>
                         <div class="sk-cube4 sk-cube"></div>
                         <div class="sk-cube3 sk-cube"></div>
                 </div>
-        </div>
+        </div> -->
 
         <div class="nav-icon">
                 <span></span>
@@ -130,10 +130,20 @@
                                                                 </p>
                                                         </div>
                                                         <div class="popup__right">
-                                                                <canvas class="popup__canvas"></canvas>
-                                                                <p class="popup__right--text">
-                                                                        Starting from left to right: Use the mouse in this box to draw yourself a picture of my knowledge and skills. <br> (You can double-click to start over).
-                                                                </p>
+                                                                <div class="popup__right__canvas__container">
+                                                                        <canvas class="popup__canvas"></canvas>
+                                                                        <p class="popup__right--text">
+                                                                                Starting from left to right: Use the mouse in this box to draw yourself a picture of my knowledge and skills. <br> (You can double-click to start over).
+                                                                        </p>
+                                                                </div>
+                                                                <div class="popup__right__bg-video">                                                                        
+                                                                        
+                                                                        <video class="bg-video__content" autoplay muted loop>
+                                                                                <source src="img/videoplayback.mp4" type="video/mp4">
+                                                                                <source src="img/videoplayback.webm" type="video/webm">
+                                                                                        Your browser does not support the video tag. I suggest you upgrade your browser.
+                                                                        </video>
+                                                                </div>
                                                         </div>
                                                 </div>
                                         </div>

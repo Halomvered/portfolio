@@ -1,4 +1,4 @@
-export var canvasWriting = function (element, minFontSize, canvasfont, letters) {
+export var canvasWriting = function (element, height, width, minFontSize, canvasfont, letters) {
 
 
 
@@ -19,8 +19,8 @@ export var canvasWriting = function (element, minFontSize, canvasfont, letters) 
     // Set the element's style properties width and height, and set
     // the canvas to fill the entire element.
     function fitToContainer(canvas){
-      canvas.style.width='100%';
-      canvas.style.height='100%';
+      canvas.style.width  = width;
+      canvas.style.height = height;
       canvas.width  = canvas.offsetWidth;
       canvas.height = canvas.offsetHeight;
     };

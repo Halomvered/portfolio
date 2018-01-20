@@ -30,7 +30,10 @@ var circleNum = 80;
 
 // SETUP FOR USING canvasWriting
 // Insert the class of the canvas element you'd like to work with.
-var elementPopup = '.popup__canvas';
+var element = '.popup__canvas';
+// Define the the size of the canvas.
+var height = '100%';
+var width = '60%';
 // Define the minimum font size that will be drawn on the canvas.
 var minFontSize = 15;
 // Set the text font.
@@ -57,10 +60,12 @@ document.addEventListener('DOMContentLoaded', ev => {
 
 window.addEventListener('load', ev => {
     randomFadingCircles(elementMain, radiusRange, changeRate, colorsMain, circleNum);
-    canvasWriting(elementPopup, minFontSize, canvasfont, letters);
+    canvasWriting(element, height, width, minFontSize, canvasfont, letters);
     clickAndDrag(scrollSpeed);
     toggleNavHighligh();
     mobileNav();
     contactForm();
     preloaderOff(animationTimer, entireTimer);
+
+    document.querySelector('.bg-video__content').playbackRate = 0.35;
 });

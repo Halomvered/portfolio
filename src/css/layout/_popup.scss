@@ -18,21 +18,27 @@
         background-color: var(--color-primary-1);
         overflow: scroll;
         z-index: 100;
-        
     }
+
     @include respond(phone-tiny){
         top: 40%;
         height: 60%;
     }
+
     @include respond(phone-tiny-2){
-        overflow-x: scroll;
-        overflow-y: scroll;
+
     }
 
     &__canvas {
         cursor: crosshair;
         background-color: var(--color-primary-4-transparent);
         border-radius: var(--border-radius);
+        position: absolute;
+        right: 0;
+        z-index: 5;
+            @include respond(tab-port){
+                visibility: hidden;
+            }
         }
 
     &__content {
@@ -51,18 +57,20 @@
     &__left {
         vertical-align: middle;
         padding: 4rem 2rem;
+        z-index: 6;
     }
     
     &__right {
         z-index: 6;
         flex: 0 0 60%;
-        background-color: none;
+        background-color: var(--color-primary-1-transparent);
         text-align: center;
 
         &--text {
             color: var(--color-primary-1);
             font-size: 1.8rem;
             font-weight: 500;
+            z-index: 5;
             @include centerAbsolute;
             transform: translate(-10%, -40%);
             @include respond(tab-land){
@@ -71,6 +79,27 @@
             @include respond(phone-tiny){
                 transform: translate(-10%, -40%);
             }
+        }
+
+        &__bg-video {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 0;
+            width: 0;
+            visibility: hidden;
+            z-index: 6;
+            opacity: .50;
+            overflow: hidden;
+            border: 3px ridge var(--color-primary-5);
+
+                @include respond(tab-port){
+                    visibility: visible;
+                    height: 70%;
+                    width: 55%;
+                    top: 10%;
+                    right: 5%;
+                }
         }
     }
     
