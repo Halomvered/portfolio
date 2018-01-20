@@ -48,22 +48,6 @@ var animationTimer = 2500;
 // Insert the number of milliseconds in which you want to entire element to fade.
 var entireTimer = 3300;
 
-// Fix responsivness problem in facebook in-app browser.
-function _fixViewportHeight() {
-    var html = document.querySelector('html');
-
-    function _onResize(event) {
-        html.style.height = window.innerHeight + 'px';
-    }
-
-    window.addEventListener('resize', _.debounce(_onResize, 125, {
-        leading: true,
-        maxWait: 250,
-        trailing: true
-    }));
-
-    _onResize();
-}
 
 
 
@@ -79,5 +63,4 @@ window.addEventListener('load', ev => {
     mobileNav();
     contactForm();
     preloaderOff(animationTimer, entireTimer);
-    _fixViewportHeight();
 });

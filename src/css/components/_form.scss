@@ -5,7 +5,7 @@
     height: 80%;
     align-content: center;
     padding: 7rem 2rem;
-    // margin-top: 3rem;
+    
     @include respond(phone-tiny) {
         margin: .5;
         overflow-x: scroll;

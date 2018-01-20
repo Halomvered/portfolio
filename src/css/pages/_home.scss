@@ -65,8 +65,12 @@
     height: 75rem;
     width: 100%;
 
+    @include respond(tab-port) {
+        height: 100vh;
+    }
+
     @include respond(phone-big) {
-        height: 90vh;
+        
         background-position: top center;
     }
 }
