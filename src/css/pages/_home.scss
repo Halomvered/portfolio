@@ -55,15 +55,25 @@
       rgba(0, 0, 0, 0.342), 
       rgba(0, 0, 0, 0.8), 
       rgba(0, 0, 0, 1)),
-        url(../../img/backgroundB.jpg);
+        url(../../img/backgroundB-small.jpg);
     background-size: cover;
     background-position: bottom left;
     background-repeat: no-repeat;
     flex: 1;
     position: relative;
-
     height: 75rem;
     width: 100%;
+
+    @media (min-resolution: 192dpi) and (min-width: 600px) {
+        background-image: radial-gradient(
+        at 90% 20%,
+      rgba(255, 255, 255, 0.493),
+      rgba(212, 211, 211, 0.164), 
+      rgba(0, 0, 0, 0.342), 
+      rgba(0, 0, 0, 0.8), 
+      rgba(0, 0, 0, 1)),
+        url(../../img/backgroundB.jpg);
+    }
 
     @include respond(tab-port) {
         height: 100vh;

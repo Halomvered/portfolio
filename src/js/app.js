@@ -66,6 +66,4 @@ window.addEventListener('load', ev => {
     mobileNav();
     contactForm();
     preloaderOff(animationTimer, entireTimer);
-
-    document.querySelector('.bg-video__content').playbackRate = 0.35;
 });

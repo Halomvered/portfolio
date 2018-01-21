@@ -25,9 +25,6 @@
         height: 60%;
     }
 
-    @include respond(phone-tiny-2){
-
-    }
 
     &__canvas {
         cursor: crosshair;
@@ -79,28 +76,23 @@
             @include respond(phone-tiny){
                 transform: translate(-10%, -40%);
             }
+            @include respond(phone-tiny-3){
+                visibility: hidden;
+            }
         }
 
-        &__bg-video {
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 0;
-            width: 0;
-            visibility: hidden;
-            z-index: 6;
-            opacity: .50;
-            overflow: hidden;
-            border: 3px ridge var(--color-primary-5);
-
-                @include respond(tab-port){
-                    visibility: visible;
-                    height: 70%;
-                    width: 55%;
-                    top: 10%;
-                    right: 5%;
-                }
-        }
+        // &__bg-video {
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     height: 0;
+        //     width: 0;
+        //     visibility: hidden;
+        //     z-index: 6;
+        //     opacity: .50;
+        //     overflow: hidden;
+        //     border: 3px ridge var(--color-primary-5);
+        // }
     }
     
 
