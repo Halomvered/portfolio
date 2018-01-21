@@ -69,6 +69,13 @@
         typing 4s steps(30, end) 4s,
         blink-caret .5s step-end infinite;
 
+        @include respond(ipad) {
+            background-color: var(--color-primary-4-transparent);
+        }
+        @include respond(tab-port) {
+            background-color: transparent;
+        }
+
         @include respond(phone-land) {
             font-size: 3rem;
         }
@@ -86,6 +93,14 @@
         opacity: 1;
         visibility: visible;
         transition: all .2s;
+
+        @include respond(ipad) {
+            visibility: hidden;
+        }
+        @include respond(tab-port) {
+            visibility: visible;
+        }
+        
 
         &.active{
             opacity: 0;

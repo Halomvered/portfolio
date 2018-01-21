@@ -12,6 +12,10 @@
     transition: all 1s ease-out;
 
 
+    @include respond(ipad){
+        background-color: var(--color-primary-1);
+    }
+
     @include respond(tab-port){
         top: 20%;
         height: 80%;
@@ -33,7 +37,7 @@
         position: absolute;
         right: 0;
         z-index: 5;
-            @include respond(tab-port){
+            @include respond(tab-land){
                 visibility: hidden;
             }
         }
@@ -46,6 +50,7 @@
         opacity: 0;
         transform: scale(0);
         transition: all .4s .2s;
+
         @include respond (phone-tiny) {
             overflow: scroll;
         }
@@ -70,15 +75,11 @@
             z-index: 5;
             @include centerAbsolute;
             transform: translate(-10%, -40%);
+
             @include respond(tab-land){
-                transform: translate(-10%, 0);
-            }
-            @include respond(phone-tiny){
-                transform: translate(-10%, -40%);
-            }
-            @include respond(phone-tiny-3){
                 visibility: hidden;
             }
+
         }
 
         &__bg-video {
@@ -93,7 +94,7 @@
             overflow: hidden;
             border: 3px ridge var(--color-primary-5);
 
-                @include respond(tab-port){
+                @include respond(tab-land){
                     visibility: visible;
                     height: 70%;
                     width: 55%;
