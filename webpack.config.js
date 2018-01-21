@@ -9,11 +9,13 @@ var extractPlugin = new ExtractTextPlugin({
 });
 
 module.exports = {
-    entry: "./src/js/app.js",
+    entry: {
+        'app': "./src/js/app.js",
+        'contentfilter': "./src/js/contentFilter.js",
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: "bundle.js",
-        // publicPath: "/dist"
+        filename: "[name].bundle.js",
     }, 
     module: {
         rules: [
@@ -50,31 +52,20 @@ module.exports = {
                     }
                 ]
             },
-            {
-                test: /\.html$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                        }
-                    }
-                ],
-                exclude: path.resolve(__dirname, 'src/index.html')
-            }
         ]
     },
     plugins: [
         extractPlugin,
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: 'src/index.html'
+            template: 'src/index.html',
+            chunks: ['app']
         }),
-        // new HtmlWebpackPlugin({
-        //     filename: 'users.html',
-        //     template: 'src/users.html',
-        //     chunks: []
-        // }),
+        new HtmlWebpackPlugin({
+            filename: 'contentfilter.html',
+            template: 'src/contentfilter.html',
+            chunks: ['contentfilter']
+        }),
         new CleanWebpackPlugin(['dist'])
     ], externals: {
         firebase: "firebase"

@@ -1,5 +1,6 @@
 import '../css/main.scss';
-import '../contentscript.html';
+import '../contentfilter.html';
+
 import {randomFadingCircles} from './scripts/decoration/randomFadingCircles.js';
 import {preloaderOff} from './scripts/decoration/preloaderOff.js';
 import {canvasWriting} from './scripts/interaction/canvasWriting.js';
