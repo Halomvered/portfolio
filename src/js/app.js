@@ -55,6 +55,9 @@ var entireTimer = 3300;
 
 
 document.addEventListener('DOMContentLoaded', ev => {
+    // Set timers to deactivate the preloader.
+    preloaderOff(animationTimer, entireTimer);
+    // Check for internet explorer, and if it is - show under construction message.
     isIe();
 });
 
@@ -65,8 +68,5 @@ window.addEventListener('load', ev => {
     toggleNavHighligh();
     mobileNav();
     contactForm();
-    preloaderOff(animationTimer, entireTimer);
-
-    // Lower the about section video speed.
-    // document.querySelector('.bg-video__content').playbackRate = 0.35;
+    
 });

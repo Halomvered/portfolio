@@ -10,6 +10,7 @@
     transition: opacity .5s linear, margin-top .5s step-start, z-index .5s step-start;
     display: block;
 
+        
         &.page-loaded {
          opacity: 0;
          margin-top: -330px;
