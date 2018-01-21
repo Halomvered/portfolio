@@ -66,4 +66,7 @@ window.addEventListener('load', ev => {
     mobileNav();
     contactForm();
     preloaderOff(animationTimer, entireTimer);
+
+    // Lower the about section video speed.
+    // document.querySelector('.bg-video__content').playbackRate = 0.35;
 });

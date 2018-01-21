@@ -81,18 +81,26 @@
             }
         }
 
-        // &__bg-video {
-        //     position: absolute;
-        //     top: 0;
-        //     right: 0;
-        //     height: 0;
-        //     width: 0;
-        //     visibility: hidden;
-        //     z-index: 6;
-        //     opacity: .50;
-        //     overflow: hidden;
-        //     border: 3px ridge var(--color-primary-5);
-        // }
+        &__bg-video {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 0;
+            width: 0;
+            visibility: hidden;
+            z-index: 6;
+            opacity: .50;
+            overflow: hidden;
+            border: 3px ridge var(--color-primary-5);
+
+                @include respond(tab-port){
+                    visibility: visible;
+                    height: 70%;
+                    width: 55%;
+                    top: 10%;
+                    right: 2%;
+                }
+        }
     }
     
 
