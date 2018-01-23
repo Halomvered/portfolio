@@ -1,5 +1,3 @@
-export var followNav = function () {
-    
     // Capture the elements that trigger the hover affect in a vraiable.
     var triggers = document.querySelectorAll('.item--js');
     // Capture the follow-along background.
@@ -47,6 +45,3 @@ export var followNav = function () {
 
     triggers.forEach(trigger => trigger.addEventListener('mouseenter',handleEnter));
     triggers.forEach(trigger => trigger.addEventListener('mouseleave',handleLeave));
-    
-    
-}
