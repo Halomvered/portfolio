@@ -9,6 +9,9 @@
         // Add class that makes element a block, to make it visibile, and possible to capture its
         // coordinates.
         this.classList.add('trigger-enter');
+        
+        var dropdown = this.querySelector('.follow-nav__dropdown');
+        dropdown.classList.add('active');
 
         // Add class that change that elements opacity from 0 to 1, to animate its appearence.
         // unless the mouse already moved on to a different trigger element.
@@ -16,7 +19,6 @@
         background.classList.add('open');
 
         // Find the coordinates for both the dropdown and the entire nav.
-        var dropdown = this.querySelector('.follow-nav__dropdown');
         var dropdownCoords = dropdown.getBoundingClientRect();
         var navCoords = nav.getBoundingClientRect();
         // Place the dropdown coordinates in an object.

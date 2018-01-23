@@ -9,14 +9,6 @@
     visibility: hidden;
     cursor: default;
 
-    // Variations for project1 page.
-    &.project1 {
-        height: 100%;
-        max-width: 100%;
-        opacity: 1;
-        visibility: visible;
-        margin: 0;
-    }
 
     @include respond(tab-land) {
         margin: 0;
@@ -108,4 +100,19 @@
     @include respond(phone-land) {
         background-image: none;
     }
+}
+
+.container-project1 {
+    height: 100%;
+    max-width: 100%;
+    opacity: 1;
+    visibility: visible;
+    margin: 0;
+    display: flex;
+}
+
+.project-content {
+    height: 100%;
+    width: 100%;
+    z-index: -10;
 }

@@ -10,11 +10,13 @@
     <link href="main.css" rel="stylesheet">
     <title>Content Filter Script - Demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Get energizing workout moves, healthy recipes, and advice on losing weight and feeling great from Health.com. Find out how to manage diabetes and depression, prevent heart attacks, and more.">
+    <meta name="keywords" content="health, www.health.com, health.com, health magazine, medical research, medical information, prevention, disease, health care, healthcare, health information, health news, healthcare information, drug information, cancer, diabetes, depression, asthma, medical library, cholesterol, herpes, bipolar, fitness, diet, weight loss, heart disease, breast cancer, fibromyalgia, pain, migraine, pharmaceutical drugs, prescription medicines, natural remedies, otc, symptoms, treatments, diagnoses"> 
 
 </head>
 
 <body class="project1">
-    <div class="container project1" id="outer-wrap">
+    <div class="container-project1" id="outer-wrap">
 
         <nav class="follow-nav">
             <div class="follow-nav__dropdownBackground">
@@ -25,7 +27,10 @@
                         <li class="follow-nav__item item--js">
                             <a href="#" class="follow-nav__link frame-glow-js">Start here</a>
                             <div class="follow-nav__dropdown follow-nav__explanation">
-                                <p>Before you is a one page design-only copy of the website www.health.com. It's comprised out of 4 editor picks, and 6 article suggestions. Please press the button to navigate to the footer.</p>
+                                <p>This mini project script - is designed to collect the content of the meta tags: "Keywords", "Description", alongside all of the headers, and image's "alt". <br><br>
+                                    It then filters commonly used transition words out of them, finds the four most repeated words in the page, and injects them into a recommended content pop-up.</p>
+                                <br>
+                                <p>To employ the script press the play button.</p>
                             </div>
                         </li>
                     </div>
@@ -44,9 +49,64 @@
                     </div>
             </ul>
         </nav>
-
-
-    </div>
+        <div class="project-content">
+            <div class="editors-choice">
+                <div class="editors-choice__item">
+                    <div class="editors-choice__img--container">
+                        <img class="editors-choice__img" src="../img/woman-grass.jpg" alt="relaxed woman fruit eating">
+                    </div>
+                    <h3 class="editors-choice__header">eating fruits for longevity!</h3>
+                </div>
+                <div class="editors-choice__item">
+                    <div class="editors-choice__img--container">
+                        <img class="editors-choice__img" src="../img/meat.jpg" alt="healthy warm recipes for winter">
+                    </div>
+                    <h3 class="editors-choice__header">15 paleo recipes to to warm you up during the winter!</h3>                          
+                </div>
+                <div class="editors-choice__item">                         
+                    <div class="editors-choice__img--container">
+                        <img class="editors-choice__img editors-choice__img--3" src="../img/eye-girl.jpg" alt="healthy revealed through the eyes">
+                    </div>
+                    <h3 class="editors-choice__header">Iridology - how do your eyes reveal your health?</h3>                          
+                </div>
+                <div class="editors-choice__item">
+                    <div class="editors-choice__img--container">
+                        <img class="editors-choice__img editors-choice__img--4" src="../img/fitness-runner.jpg" alt="woman jugging for health">
+                    </div>
+                    <h3 class="editors-choice__header">top 5 reasons for you to start jugging!</h3>                          
+                </div>
+            </div>
+            <div class="article-overview">
+                <div class="article-overview__item">
+                        <img class="article-overview__img article-overview__img--4" src="../img/cleaning-mop-01.jpg" alt="avoid allergies through house cleaning">
+                </div>
+                <div class="article-overview__item">
+                        <h4 class="article-overview__header">allergies</h4>
+                        <p class="article-overview__paragraph">How to check your house for mold?</p>
+                    </div>
+                    <div class="article-overview__item">
+                        <img class="article-overview__img article-overview__img--4" src="../img/ChristinaApplega.jpg" alt="christina applegate breast cancer">
+                    </div>
+                    <div class="article-overview__item">
+                        <h4 class="article-overview__header">Breast cancer</h4>
+                        <p class="article-overview__paragraph">Cancer Survivor Christina Applegate Reveals She Had Ovaries and Fallopian Tubes Removed—and Worries For Her Daughter</p>                    
+                    </div>
+                    <div class="article-overview__item">
+                        <img class="article-overview__img article-overview__img--4" src="../img/glasses.jpg" alt="eye Health and care">
+                    </div>
+                    <div class="article-overview__item">
+                        <h4 class="article-overview__header">Eye health</h4>
+                        <p class="article-overview__paragraph">new study shows the correlation between bad eyesight and spending too much time indoors</p>                    
+                    </div>
+                    <div class="article-overview__item">
+                        <img class="article-overview__img article-overview__img--4" src="../img/pet.jpg" alt="perfect for pet owners">                                            
+                    </div>
+                    <div class="article-overview__item">
+                        <h4 class="article-overview__header">Pets</h4>
+                        <p class="article-overview__paragraph">11 Awesome Gifts for People Who Are Obsessed With Their Pet</p>                    
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
