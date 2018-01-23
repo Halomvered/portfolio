@@ -100,7 +100,16 @@
 
 // Project button border flashing animation.
 @keyframes flashing {
-  0% {border: 3px solid yellow;}    
-    50% {border: 2.5px solid red;} 
-    100% {border: 3px solid yellow;}
- }
+  0%, 100% {
+    box-shadow: 1px 0px 19px 4px #fff503,
+    inset 0px 0px 10px rgba(255, 255, 255, 0.5); 
+    background-color: #fff503;
+    color: var(--color-primary-2-light);
+    font-weight: 500;
+    }
+
+  50% {
+    box-shadow: 0px 0px 0px 0px rgba(255, 245, 3, 0),
+    inset 0px 0px 0px rgba(255, 255, 255, 0);
+  }
+}

@@ -65,18 +65,18 @@
         padding: 1rem 1.5rem;
         display: inline-block;
         border-radius: var(--border-radius);
-        border-top: 2px solid var(--color-white);
-        border-bottom: 2px solid var(--color-white);
-        background-color: var(--color-primary-1);
+        border: 2px solid var(--color-white);
         position: relative;
         box-shadow: var(--shadow-dark);
         backface-visibility: hidden;
+        border-radius: 5px;
         
         &.frame-glow-js {
-            animation: flashing 1000ms linear infinite;        
+            animation: flashing 2s linear infinite;        
         }
-
+        
         &--play {
+            background-color: var(--color-primary-1);
             border: 4px ridge var(--color-white);
             font-size: 5rem;
             height: 10rem;
