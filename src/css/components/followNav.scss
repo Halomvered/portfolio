@@ -1,10 +1,7 @@
 .follow-nav {
-    position: absolute;
-    left: 0;
     height: 100vh;
     perspective: 600px;
     border-radius: 3px;
-    
     
     &__content {
         height: 100%;
@@ -122,14 +119,17 @@
         transform: translate(20vh,0);
         will-change: opacity;
         display: none;
-        z-index: 3;
+        z-index: 100;
+        color: var(--color-primary-1);
+        font-size: 1.9rem;
+        font-weight: 400;
     }
 
     &__dropdownBackground {
         width:100px;
         height:100px;
         position: absolute;
-        background: #fff;
+        background: var(--color-primary-5);
         border-radius: 4px;
         box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
         transition:all 0.3s, opacity 0.1s, transform 0.2s;
@@ -137,7 +137,7 @@
         display: flex;
         justify-content: center;
         opacity:0;
-        z-index: 2;
+        z-index: 9;
 
         &.open {
             opacity: 1;
@@ -149,8 +149,9 @@
         width:20px;
         height:20px;
         display: block;
-        background:white;
+        background: var(--color-primary-5);
         transform: translate(-1250%, 150%) rotate(45deg);
+        z-index: 9;
     }
 
     &__explanation {
