@@ -59,7 +59,7 @@ export var canvasWriting = function (element, height, width, minFontSize, canvas
      var stepSize = textWidth( letter, fontSize );
      
      if (d > stepSize) {
-      var angle = Math.atan2(mouse.y-position.y, mouse.x-position.x);
+      var angle = Math.atan2(mouse.y - position.y, mouse.x - position.x);
       
       c.font = fontSize + canvasfont;
      

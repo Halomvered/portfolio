@@ -8,6 +8,16 @@
     opacity: 0;
     visibility: hidden;
     cursor: default;
+
+    // Variations for project1 page.
+    &.project1 {
+        height: 100%;
+        max-width: 100%;
+        opacity: 1;
+        visibility: visible;
+        margin: 0;
+    }
+
     @include respond(tab-land) {
         margin: 0;
         max-width: 100%;

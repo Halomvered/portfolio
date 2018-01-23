@@ -1,0 +1,159 @@
+.follow-nav {
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    perspective: 600px;
+    background-color: aqua;
+    border-radius: 3px;
+
+
+    &__content {
+        height: 100%;
+        width: 20vh;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+
+    &__link {
+        // width: 95%;
+        text-align: center;
+        font-size: var(--default-font-size);
+        font-weight: 400;
+        color: var(--color-primary-3);
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        display: inline-block;
+        border-radius: var(--border-radius);
+        border-top: 2px solid var(--color-white);
+        border-bottom: 2px solid var(--color-white);
+        background-color: var(--color-primary-1-transparent);
+        position: relative;
+        box-shadow: var(--shadow-dark);
+        backface-visibility: hidden;
+
+        &--play {
+            border: 2px solid var(--color-white);
+            font-size: 5rem;
+            height: 10rem;
+            width: 10rem;
+            border-radius: 500%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: .5rem;
+            transition: all .2s;
+
+            &:hover {
+                box-shadow: var(--shadow-light);
+                transform: translateY(-3px);
+                border: 2px solid var(--color-primary-2-light);
+                color: var(--color-primary-2-light);
+                
+                &::after {
+                    transform: scalex(1.4) scaleY(1.4);
+                    opacity: 0;
+                    border: 2px solid var(--color-white);
+                    background-color: var(--color-primary-1-transparent);
+        
+                }
+            }
+
+            &:active,
+            &:focus {
+                outline: none;
+                transform: translateY(-1px);
+                box-shadow: var(--shadow-dark);
+            }
+        }
+    }
+
+
+    &__item {
+        position: relative;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 33.3333%;
+        
+        &--1 { 
+            background-image: linear-gradient(155deg,
+            var(--color-primary-1) 0%,
+            var(--color-primary-1) 75%,
+            var(--color-primary-5) 75%);
+        }
+        &--2 {
+            background-color: var(--color-primary-5);
+        }
+        &--3 {
+            background-image: linear-gradient(25deg,
+            var(--color-primary-1) 0%,
+            var(--color-primary-1) 75%,
+            var(--color-primary-5) 75%);
+        }
+
+        }
+
+    &__dropdown {
+        opacity: 0;
+        position: absolute;
+        overflow: hidden;
+        padding: 20px;
+        top: -20px;
+        border-radius: 2px;
+        transition: all 0.5s;
+        transform: translate(34rem, 9rem);
+        will-change: opacity;
+        display: none;
+        z-index: 3;
+    }
+
+    &__dropdownBackground {
+        width:100px;
+        height:100px;
+        position: absolute;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+        transition:all 0.3s, opacity 0.1s, transform 0.2s;
+        transform-origin: 50% 0;
+        display: flex;
+        justify-content: center;
+        opacity:0;
+        z-index: 2;
+
+        &.open {
+            opacity: 1;
+        }
+    }
+
+    &__triangle {
+        position: absolute;
+        width:20px;
+        height:20px;
+        display: block;
+        background:white;
+        transform: translate(-1250%, 300%) rotate(45deg);
+    }
+}
+
+// Show nav content with javascript by adding these classes before a dropdown class.
+.trigger-enter .follow-nav__dropdown {
+    display: block;
+  }
+.trigger-enter-active .follow-nav__dropdown {
+opacity: 1;
+}
+
+.explanation {
+    min-width:500px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.7;
+  }

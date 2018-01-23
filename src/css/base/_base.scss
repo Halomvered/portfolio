@@ -47,7 +47,14 @@ body {
     @include respond(tab-land) {
         height: 100vh;
     }
+
+    // Body modification for the project1 page.
+    &.project1{
+        background-image:none;
+    }
 }
+
+
 
 html, body, #outer-wrap {
     position: absolute;
