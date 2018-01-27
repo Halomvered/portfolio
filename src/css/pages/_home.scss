@@ -110,10 +110,19 @@
     margin: 0;
     display: flex;
     position: relative;
+
+    @include respond(ipad) {
+        flex-direction: column;
+    }
 }
 
 .project-content {
     height: 100%;
     width: 100%;
     z-index: -10;
+
+    @include respond(ipad) {
+        height: inherit;
+        overflow: scroll;
+    }
 }
