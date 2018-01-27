@@ -5,35 +5,32 @@ export var project1 = function () {
     // Stage #1: Prepare CSS and inject it to the page
     ///////////////////////////////////////////////////
 
+    // If the script setup doesn't already exists in the page then:
+    if(!document.querySelector('.reco__container')){
     // Create a div container for the HTML of the recommended content popup.
     var containerDiv = document.createElement('div');
     // Set the proper CSS selector
     containerDiv.classList.add('reco__container');
 
-    // Nest all of the relevant elements inside containerDiv
+    // populate containerDiv with the relevant elements.
     containerDiv.innerHTML += 
         '<div class="reco__content"> \n' +
             '<div class="reco__content-box">\n' +
                     '<a href="#" class="reco__content-close Marker--js">&times;</a>\n' +
-                    '<div class="reco__content-block">\n' +
+                    // '<div class="reco__content-block">\n' +
 
-                    '</div>\n' +
-                    '<div class="reco__content-block">\n' +
+                    // '</div>\n' +
+                    // '<div class="reco__content-block">\n' +
 
-                    '</div>\n' +
-                    '<div class="reco__content-block">\n' +
+                    // '</div>\n' +
+                    // '<div class="reco__content-block">\n' +
 
-                    '</div>\n' +
-                    '<div class="reco__content-block">\n' +
+                    // '</div>\n' +
+                    // '<div class="reco__content-block">\n' +
 
-                    '</div>\n' +
+                    // '</div>\n' +
             '</div>\n' +
         '</div>'
-
-//////////// For reference
-// '<p>content related to this site\'s most common keyword #1</p>\n' +
-// '<h3>Health</h3>\n' +
-
 
 
     // Add the containerDiv to the body.
@@ -92,7 +89,7 @@ export var project1 = function () {
     '.reco__content-block {\n' +
         'height: 80%;\n' +
         'width: 20%;\n' +
-        'background-color: orange;\n' +
+        'background-color: rgb(255, 140, 0);\n' +
         'margin: 15px;\n' +
         'border: 4px ridge #777;\n' +
         'display: flex;\n' +
@@ -103,7 +100,8 @@ export var project1 = function () {
     
     '.reco__content-block > p,\n' +
     '.reco__content-block > h3 {\n' +
-        'color:  rgb(79, 128, 225);\n' +
+        'font-family: "Arial Black", Gadget, sans-serif;\n' +
+        'color:  rgb(79, 128, 255);\n' +
         'text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);\n' +
         'text-transform: uppercase;\n' +
         'padding: 5px;\n' +
@@ -180,15 +178,15 @@ export var project1 = function () {
         recoConent.classList.toggle('close');
     });
 
-    
+
 
     ///////////////////////////////////////////////////
     // Stage #2: Collect all of the pages keywords and 
     //           organize them by number of repetition.
     ///////////////////////////////////////////////////
 
-    // Define a regex expression designed to find a collection of redundant transition, and key words.
-    var expression = /(?:www\.|\.com|\W|\d|\bvideo\b|\bsubscribe\b|\bphoto\b|\bvideos\b|\bworking\b|\bout\b|\band\b|\btime\b|\bperson\b|\byear\b|\bway\b|\bday\b|\bthing\b|\bworld\b|\blife\b|\bhand\b|\bpart\b|\beye\b|\bplace\b|\bweek\b|\bcase\b|\bpoint\b|\bgovernment\b|\bcompany\b|\bnumber\b|\bgroup\b|\bproblem\b|\bfact\b|\bbe\b|\bhave\b|\bdo\b|\bsay\b|\bget\b|\bmake\b|\bgo\b|\bknow\b|\btake\b|\bsee\b|\bcome\b|\bthink\b|\blook\b|\bwant\b|\bgive\b|\buse\b|\bfind\b|\btell\b|\bask\b|\bseem\b|\bfeel\b|\btry\b|\bleave\b|\bcall\b|\bgood\b|\bnew\b|\bfirst\b|\blast\b|\blong\b|\bgreat\b|\blittle\b|\bown\b|\bother\b|\bold\b|\bright\b|\bbig\b|\bhigh\b|\bdifferent\b|\bsmall\b|\blarge\b|\bnext\b|\bearly\b|\bimportant\b|\bfew\b|\bpublic\b|\bbad\b|\bsame\b|\bable\b|\bto\b|\bof\b|\bin\b|\bfor\b|\bon\b|\bwith\b|\bat\b|\bby\b|\bfrom\b|\bup\b|\babout\b|\binto\b|\bover\b|\bafter\b|\bthe\b|\band\b|\ba\b|\bthat\b|\bI\b|\bit\b|\bnot\b|\bhe\b|\bas\b|\byou\b|\bthis\b|\bbut\b|\bhis\b|\bthey\b|\bher\b|\bshe\b|\bor\b|\ban\b|\bwill\b|\bmy\b|\bone\b|\ball\b|\bwould\b|\bthere\b|\btheir\b|\byour\b|\bs\b|\bhow\b|\bthese\b|\bcan\b|\bis\b|\bt\b|\bwhat\b|\bsays\b|\bways\b|\breally\b|\bthings\b|\bwhy\b|\bare\b|\binformation\b|\bmyself\b|\bshares\b|\breveals\b|\bpeople\b|\bneed\b|\bpacked\b|\bgoing\b|\bwas\b|\bloss\b|\bthan\b|\beasier\b|\bdonate\b|\bsome\b|\bhandle\b)/ig
+    // Define a regex expression designed to find a collection of redundant transition, and keywords.
+    var expression = /(?:www\.|\.com|\W|\d|\bhome\b|\bcategory\b|\bshop\b|\bnow\b|\bselect\b|\boff\b|\brecommendations\b|\bvideo\b|\bsubscribe\b|\bphoto\b|\bvideos\b|\bworking\b|\bout\b|\band\b|\btime\b|\bperson\b|\byear\b|\bway\b|\bday\b|\bthing\b|\bworld\b|\blife\b|\bhand\b|\bpart\b|\beye\b|\bplace\b|\bweek\b|\bcase\b|\bpoint\b|\bgovernment\b|\bcompany\b|\bnumber\b|\bgroup\b|\bproblem\b|\bfact\b|\bbe\b|\bhave\b|\bdo\b|\bsay\b|\bget\b|\bmake\b|\bgo\b|\bknow\b|\btake\b|\bsee\b|\bcome\b|\bthink\b|\blook\b|\bwant\b|\bgive\b|\buse\b|\bfind\b|\btell\b|\bask\b|\bseem\b|\bfeel\b|\btry\b|\bleave\b|\bcall\b|\bgood\b|\bnew\b|\bfirst\b|\blast\b|\blong\b|\bgreat\b|\blittle\b|\bown\b|\bother\b|\bold\b|\bright\b|\bbig\b|\bhigh\b|\bdifferent\b|\bsmall\b|\blarge\b|\bnext\b|\bearly\b|\bimportant\b|\bfew\b|\bpublic\b|\bbad\b|\bsame\b|\bable\b|\bto\b|\bof\b|\bin\b|\bfor\b|\bon\b|\bwith\b|\bat\b|\bby\b|\bfrom\b|\bup\b|\babout\b|\binto\b|\bover\b|\bafter\b|\bthe\b|\band\b|\ba\b|\bthat\b|\bI\b|\bit\b|\bnot\b|\bhe\b|\bas\b|\byou\b|\bthis\b|\bbut\b|\bhis\b|\bthey\b|\bher\b|\bshe\b|\bor\b|\ban\b|\bwill\b|\bmy\b|\bone\b|\ball\b|\bwould\b|\bthere\b|\btheir\b|\byour\b|\bs\b|\bhow\b|\bthese\b|\bcan\b|\bis\b|\bt\b|\bwhat\b|\bsays\b|\bways\b|\breally\b|\bthings\b|\bwhy\b|\bare\b|\binformation\b|\bmyself\b|\bshares\b|\breveals\b|\bpeople\b|\bneed\b|\bpacked\b|\bgoing\b|\bwas\b|\bloss\b|\bthan\b|\beasier\b|\bdonate\b|\bsome\b|\bhandle\b)/ig
 
 
 
@@ -250,4 +248,40 @@ export var project1 = function () {
     // the most frequent used key - words into the
     // previously injected HTML of the script.
     ///////////////////////////////////////////////////
+
+    // Create a class for the main key words of the site.
+    function MainKeyWord(word, frequency) {
+        this.word = word;
+        this.frequency = frequency;
+
+        // Create the needed HTML for each word.
+        this.create = function (placementSelector) {
+            // Create a div container for the HTML of the recommended content popup.
+            var contentBlock = document.createElement('div');
+            // Set the proper CSS selector
+            contentBlock.classList.add('reco__content-block');
+            // Set each HTML with this.word and this.frequency.
+            contentBlock.innerHTML += 
+            '<p>Place here content related to this site\'s most common keyword <strong>#'+ this.frequency +'</strong></p>\n' +
+            '<h3>'+ this.word +'</h3>\n'
+            // Append the div container to the selcted element.
+            placementSelector.appendChild(contentBlock);
+        }
+    }
+
+    // Use only the 4 first words from wordsForAds, iterate through them to create for each
+    // its own MainKeyWord object.
+    var finalKeyWords = wordsForAds.splice(0, 4).map(function (word, index) {
+        return new MainKeyWord(word, index + 1);
+    });
+
+    // Define the placementSelector for MainKeyWord.create().
+    var injectionPoint = document.querySelector('.reco__content-box');
+
+    // Append each item in finalKeyWords into the placementSelector.
+    finalKeyWords.forEach(function (word) {
+        word.create(injectionPoint);
+    });
+
+    };
 }

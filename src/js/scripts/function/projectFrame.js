@@ -10,6 +10,7 @@ function removeGlow() {
 
 
 function addGlow() {
+    navLinks[0].classList.remove('frame-glow-js');
     navLinks[2].classList.add('frame-glow-js');
 }
 
