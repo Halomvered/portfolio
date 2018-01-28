@@ -12,6 +12,7 @@ module.exports = {
     entry: {
         'app': "./src/js/app.js",
         'contentfilter': "./src/js/contentFilter.js",
+        'heatmap': "./src/js/heatMap.js",
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -65,6 +66,11 @@ module.exports = {
             filename: 'contentfilter.html',
             template: 'src/contentfilter.html',
             chunks: ['contentfilter']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'heatmap.html',
+            template: 'src/heatmap.html',
+            chunks: ['heatmap']
         }),
         new CleanWebpackPlugin(['dist'])
     ], externals: {
