@@ -1,13 +1,5 @@
 export var project2 = function () {
 
-
-
-
-
-
-
-
-
   // Set variables for the element in which you want to create it + declare its context
   // in a variable.
   var canvas = document.querySelector('.heatmap__canvas'),
@@ -27,11 +19,11 @@ export var project2 = function () {
 
   
   // Regenerate and restart heatmap when the window is resized.
-  // window.addEventListener('resize', function(e){
-  //   canvas.width = canvas.offsetWidth;
-  //   canvas.height = canvas.offsetHeight;
-  //   init();
-  // });
+  window.addEventListener('resize', function(e){
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    init();
+  });
 
   // Create object to track mouse movement.
   var mouse = {
