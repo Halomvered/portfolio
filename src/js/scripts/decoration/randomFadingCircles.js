@@ -32,7 +32,7 @@ function fitToContainer(canvas){
 
 
 
-// Regenerate the circles and thier boundries when the window is resized.
+// Regenerate the circles and their boundries when the window is resized.
 window.addEventListener('resize', (e) => {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
@@ -134,7 +134,7 @@ function init() {
 
 
 function animate() {
-    // use requestAnimationFrame to make run the animation economically.
+    // use requestAnimationFrame to run the animation economically.
     requestAnimationFrame(animate);
     // Clear all the previous positions of the circles.
     c.clearRect(0, 0, innerWidth, innerHeight);

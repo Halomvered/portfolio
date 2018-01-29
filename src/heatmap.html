@@ -15,6 +15,11 @@
 <body class="project1">
     <div class="container-project1" id="outer-wrap">
 
+            <div class="ViewableOnly">
+                    <img src="../img/Red-Triangle.png" alt="Viewable Only On Pc" class="ViewableOnly__icon">
+                    <p class="ViewableOnly__text">Viewable Only On PC</p>
+            </div>
+        
         <nav class="follow-nav">
             <div class="follow-nav__dropdownBackground">
               <span class="follow-nav__triangle"></span>
@@ -24,10 +29,11 @@
                         <li class="follow-nav__item item--js">
                             <a href="#" class="follow-nav__link frame-glow-js">Start here</a>
                             <div class="follow-nav__dropdown follow-nav__explanation">
-                                <p>Mini project overview:<br> This script is designed to collect the content of the meta<br>tags: "Keywords", and "Description", alongside all of the headers, and<br>image's "alt". <br><br>
-                                    It then filters commonly used transition words out of them, finds the four<br> most repeated keywords, and injects them into a recommended<br>content pop-up.</p>
+                                <p><strong>Mini project overview:</strong><br>The script's canvas particles react to your mouse movements 
+                                   and clicks by changing their colors.<br><br>The more your mouse stays or move through a certain 
+                                   area, the 'hotter' the colors of that area become. While clicks are represented by the color purple.</p>
                                 <br>
-                                <p>To employ the script press the play button.</p>
+                                <p>Move the mouse around the page, and when you're ready generate the heat map, or see the script works in real time: <strong>press play.</strong></p>
                             </div>
                         </li>
                     </div>
@@ -40,7 +46,7 @@
                         <li class="follow-nav__item item--js">
                             <a href="#" class="follow-nav__link">Source Code</a>
                             <div class="follow-nav__dropdown follow-nav__dropdown--2 follow-nav__explanation">
-                                    <p>Feel free to review the script and/or copy it to the console while visiting the<br>homepage of different sites, to see it at work.</p>
+                                    <p>Feel free to review the script on github.</p>
                                     <a class="btn-solid btn-solid--secondary u-margin-top-small u-margin-top-right" href="https://github.com/Halomvered/Basic-recommended-content-Script/blob/master/smartContentScript.js" target="_blank">Source code</a>
                                     <a class="btn-solid btn-solid--secondary u-margin-top-small" href="/#portfolio">Return home</a>
                             </div>
@@ -49,6 +55,9 @@
             </ul>
         </nav>
         <div class="project-content">
+            
+            <canvas class="heatmap__canvas"></canvas>
+
             <div class="editors-choice">
                 <div class="editors-choice__item">
                     <div class="editors-choice__img--container">

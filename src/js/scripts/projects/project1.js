@@ -57,6 +57,9 @@ export var project1 = function () {
         'opacity: 1;\n' +
         'transform: scale(1);\n' +
         'transition: all .2s;\n' +
+        '-webkit-animation: cascade .5s ease-out;\n' +
+        '-moz-animation: cascade .5s ease-out;\n' +
+        '-o-animation: cascade .5s ease-out;\n' +
         'animation: cascade .5s ease-out;\n' +
     '}\n' +
     
@@ -83,6 +86,9 @@ export var project1 = function () {
         'justify-content: space-between;\n' +
         'align-items: center;\n' +
         'transition: all .2s;\n' +
+        '-webkit-animation: elementSlide 2s ease-in;\n' +
+        '-moz-animation: elementSlide 2s ease-in;\n' +
+        '-o-animation: elementSlide 2s ease-in;\n' +
         'animation: elementSlide 2s ease-in;\n' +
     '}\n' +
     
