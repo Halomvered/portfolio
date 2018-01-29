@@ -1,13 +1,5 @@
 export var project2 = function () {
 
-
-
-
-
-
-
-
-
   // Set variables for the element in which you want to create it + declare its context
   // in a variable.
   var canvas = document.querySelector('.heatmap__canvas'),
