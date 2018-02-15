@@ -134,7 +134,8 @@
                 border: 2.5px ridge var(--color-white);
             }
 
-            &:hover {
+            &:hover, 
+            &:focus  {
                 box-shadow: var(--shadow-light);
                 transform: translateY(-3px);
                 border: 3px ridge var(--color-white);
@@ -149,8 +150,7 @@
                 }
             }
 
-            &:active,
-            &:focus {
+            &:active {
                 outline: none;
                 transform: translateY(-1px);
                 box-shadow: var(--shadow-dark);

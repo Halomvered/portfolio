@@ -13,6 +13,8 @@ module.exports = {
         'app': "./src/js/app.js",
         'contentfilter': "./src/js/contentFilter.js",
         'heatmap': "./src/js/heatMap.js",
+        'iframechat': "./src/js/iframechat.js",
+        'iframe': "./src/js/iframe.js",
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -71,6 +73,11 @@ module.exports = {
             filename: 'heatmap.html',
             template: 'src/heatmap.html',
             chunks: ['heatmap']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'iframechat.html',
+            template: 'src/iframechat.html',
+            chunks: ['iframechat']
         }),
         new CleanWebpackPlugin(['dist'])
     ], externals: {
