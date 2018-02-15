@@ -37,7 +37,7 @@ function initIframe() {
         function exportMessageLog(messageLog) {
             // Turn message object into string and post it to parent window..
             parent.window.postMessage(JSON.stringify(messageLog),
-            this.origin);
+            window.origin);
         }
         
         // Function to listen to messages sent from iframes.
@@ -47,7 +47,9 @@ function initIframe() {
                 return;
             // otherwish, parse its data(all existing messages), use it to populate the chatMessages ul.
             } else {
-                populateIframe(JSON.parse(e.data), chatMessages);
+                if (e.data.type !== "webpackOk") {
+                    populateIframe(JSON.parse(e.data), chatMessages);
+                }
             }
         };
         // Function to populate the chatMessages ul.

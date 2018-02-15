@@ -147,10 +147,13 @@ function init() {
             return;
             // otherwish, parse its data(a new message), and push it into the messages array.
         } else {
-            messagesLog.push(JSON.parse(e.data));
-            storeItem('messagesLog', JSON.stringify(messagesLog));
-            // Then update the messages log of all iframes
-            updateAll()
+            if (e.data.type !== "webpackOk") {
+                messagesLog.push(JSON.parse(e.data));
+                storeItem('messagesLog', JSON.stringify(messagesLog));
+                // Then update the messages log of all iframes
+                updateAll()
+            }
+            
         };
     };
     // After page loads -
